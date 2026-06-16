@@ -78,7 +78,7 @@ Progression : [░░░░░░░░░░░░░░░░░░░░] __.
 
 </details>
 
-*Derniere mise a jour automatique des statistiques : 16/06/2026 a 19:45:16*
+*Derniere mise a jour automatique des statistiques : 16/06/2026 a 19:57:50*
 
 <!-- END_STATS -->
 
@@ -109,45 +109,6 @@ Le projet est entierement communautaire. Vous pouvez participer de trois maniere
 * Voie I : Recenser une carte - Renseignez les details d'une carte Carapuce manquante dans l'index (Set, annee, numero, langue, photos recto/verso).
 * Voie II : Offrir un item - Envoyez une carte physique ou un sticker a l'adresse de la Maison (BP 007, France) pour l'ajouter a notre coffret physique. Vos dons alimentent le Mur des Donateurs.
 * Voie III : Corriger une notice - Proposez des modifications si vous detectez une erreur historique ou une faute de frappe sur une fiche.
-
----
-
-## Installation et Lancement Local
-
-Le projet est propulse par Next.js 15, TypeScript, Supabase et Vanilla CSS.
-
-### 1. Cloner le projet et installer les dependances
-```bash
-npm install
-```
-
-### 2. Configuration des variables d'environnement
-Copiez le fichier exemple et remplissez les cles de votre projet Supabase :
-```bash
-cp .env.local.example .env.local
-```
-
-### 3. Base de donnees Supabase (Migrations et Seed)
-Pour initialiser le schema de tables et injecter les 24 cartes de demonstration :
-```bash
-# Appliquer la migration de base
-supabase db push
-
-# Injecter les cartes de demo
-# Executez le contenu de supabase/seed.sql dans l'editeur SQL de Supabase
-```
-
-### 4. Lancement du serveur de developpement
-```bash
-npm run dev
-```
-Ouvrez http://localhost:3000 pour visiter le musee.
-
-### 5. Mise a jour des statistiques du README
-Pour mettre a jour automatiquement les compteurs et les tableaux par langues/sets ci-dessus a partir des donnees :
-```bash
-npm run update-readme
-```
 
 ---
 
