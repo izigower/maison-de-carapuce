@@ -1,22 +1,40 @@
 const fs = require('fs');
 const path = require('path');
 
+// ============================================================
+// CONFIGURATION DE LA COLLECTION - REMPLISSEZ CES VALEURS
+// ============================================================
+const TOTAL_MAX_CARDS = "__"; // REMPLIR ICI : Nombre total maximum de cartes existantes à collecter (ex: 500)
+
+const TARGETS_BY_LANG = {
+  'FR': "__", // REMPLIR ICI : Nombre de cartes existantes en Francais
+  'EN': "__", // REMPLIR ICI : Nombre de cartes existantes en Anglais
+  'JP': "__", // REMPLIR ICI : Nombre de cartes existantes en Japonais
+  'DE': "__", // REMPLIR ICI : Nombre de cartes existantes en Allemand
+  'IT': "__", // REMPLIR ICI : Nombre de cartes existantes en Italien
+  'ES': "__", // REMPLIR ICI : Nombre de cartes existantes en Espagnol
+  'KR': "__", // REMPLIR ICI : Nombre de cartes existantes en Coréen
+  'UK': "__", // REMPLIR ICI : Nombre de cartes existantes au Royaume-Uni
+  'INT': "__" // REMPLIR ICI : Nombre de cartes existantes Internationales
+};
+
 const SEED_PATH = path.join(__dirname, '..', 'supabase', 'seed.sql');
 const README_PATH = path.join(__dirname, '..', 'README.md');
 
 const LANG_MAP = {
-  'FR': { name: 'Français', flag: '🇫🇷' },
-  'EN': { name: 'English', flag: '🇺🇸' },
-  'JP': { name: '日本語', flag: '🇯🇵' },
-  'DE': { name: 'Deutsch', flag: '🇩🇪' },
-  'IT': { name: 'Italiano', flag: '🇮🇹' },
-  'ES': { name: 'Español', flag: '🇪🇸' },
-  'KR': { name: '한국어', flag: '🇰🇷' },
-  'UK': { name: 'English (UK)', flag: '🇬🇧' },
-  'INT': { name: 'International', flag: '🌐' }
+  'FR': { name: 'Francais' },
+  'EN': { name: 'English' },
+  'JP': { name: 'Japonais' },
+  'DE': { name: 'Allemand' },
+  'IT': { name: 'Italien' },
+  'ES': { name: 'Espagnol' },
+  'KR': { name: 'Coreen' },
+  'UK': { name: 'English (UK)' },
+  'INT': { name: 'International' }
 };
 
 function getProgressChar(percent) {
+  if (isNaN(percent)) return '░'.repeat(20);
   const width = 20;
   const progress = Math.round((percent / 100) * width);
   const empty = width - progress;
@@ -55,7 +73,13 @@ function parseCardsFromSeed() {
 function generateStatsMarkdown(cards) {
   const totalCards = cards.length;
   const ownedCards = cards.filter(c => c.is_owned).length;
-  const ownedPercent = totalCards > 0 ? ((ownedCards / totalCards) * 100).toFixed(1) : '0.0';
+  
+  // Parse config total max
+  const maxCardsVal = parseInt(TOTAL_MAX_CARDS);
+  const isMaxValid = !isNaN(maxCardsVal) && maxCardsVal > 0;
+  const displayMax = isMaxValid ? maxCardsVal : '[ENTRER_MAX_TOTAL]';
+  const ownedPercent = isMaxValid ? ((ownedCards / maxCardsVal) * 100).toFixed(1) : '__._';
+  const progressBar = getProgressChar(isMaxValid ? parseFloat(ownedPercent) : 0);
 
   // Group by language
   const langStats = {};
@@ -73,15 +97,21 @@ function generateStatsMarkdown(cards) {
   const sortedLangs = Object.keys(langStats).sort((a, b) => langStats[b].total - langStats[a].total);
 
   // Generate languages table
-  let tableMarkdown = '| Langue | Cartes Référencées | Cartes Possédées | Progression | Complété |\n';
-  tableMarkdown += '| :--- | :---: | :---: | :---: | :---: |\n';
+  let tableMarkdown = '| Langue | Cartes Archives | Cartes Possedees | Cible Max | Progression | Complete |\n';
+  tableMarkdown += '| :--- | :---: | :---: | :---: | :---: | :---: |\n';
 
   sortedLangs.forEach(lang => {
-    const info = LANG_MAP[lang] || { name: lang, flag: '🏳️' };
+    const info = LANG_MAP[lang] || { name: lang };
     const stats = langStats[lang];
-    const pct = stats.total > 0 ? ((stats.owned / stats.total) * 100).toFixed(0) : '0';
-    const bar = getProgressChar(parseInt(pct));
-    tableMarkdown += `| ${info.flag} **${info.name}** (${lang}) | ${stats.total} | ${stats.owned} | \`${bar}\` | **${pct}%** |\n`;
+    
+    // Parse lang target
+    const targetVal = parseInt(TARGETS_BY_LANG[lang]);
+    const isTargetValid = !isNaN(targetVal) && targetVal > 0;
+    const displayTarget = isTargetValid ? targetVal : '[A_REMPLIR]';
+    const pct = isTargetValid ? ((stats.owned / targetVal) * 100).toFixed(0) : '__';
+    const bar = getProgressChar(isTargetValid ? parseInt(pct) : 0);
+    
+    tableMarkdown += `| **${info.name}** (${lang}) | ${stats.total} | ${stats.owned} | ${displayTarget} | \`${bar}\` | **${pct}%** |\n`;
   });
 
   // Group by set
@@ -99,44 +129,41 @@ function generateStatsMarkdown(cards) {
   // Sort sets by year ascending
   const sortedSets = Object.keys(setStats).sort((a, b) => setStats[a].year - setStats[b].year);
   
-  let setTableMarkdown = '| Set / Série | Année | Cartes Référencées | Cartes Possédées | Complété |\n';
-  setTableMarkdown += '| :--- | :---: | :---: | :---: | :---: |\n';
+  let setTableMarkdown = '| Set / Serie | Annee | Cartes Archives | Cartes Possedees |\n';
+  setTableMarkdown += '| :--- | :---: | :---: | :---: |\n';
   sortedSets.forEach(set => {
     const stats = setStats[set];
-    const pct = stats.total > 0 ? ((stats.owned / stats.total) * 100).toFixed(0) : '0';
-    setTableMarkdown += `| 📦 **${set}** | ${stats.year} | ${stats.total} | ${stats.owned} | **${pct}%** |\n`;
+    setTableMarkdown += `| **${set}** | ${stats.year} | ${stats.total} | ${stats.owned} |\n`;
   });
-
-  const progressBar = getProgressChar(parseFloat(ownedPercent));
 
   // Visual Markdown output
   return `
-### 📊 Progression Générale de la Collection
-Voici l'état actuel de la collection physique de la **Maison de Carapuce** :
+### Progression Generale de la Collection
+Voici l'état actuel de la collection physique de la Maison de Carapuce :
 
 \`\`\`text
-Progression : [${progressBar}] ${ownedPercent}% (${ownedCards} / ${totalCards} cartes)
+Progression : [${progressBar}] ${ownedPercent}% (${ownedCards} / ${displayMax} cartes possedees)
 \`\`\`
 
 ---
 
-### 🌐 Répartition par Langues
+### Repartition par Langues
 <details open>
-<summary><b>Cliquez pour voir les statistiques détaillées par langue</b></summary>
+<summary><b>Cliquez pour voir les statistiques detaillees par langue</b></summary>
 
 ${tableMarkdown}
 </details>
 
 ---
 
-### 📦 Répartition par Sets & Séries
+### Repartition par Sets et Series
 <details>
-<summary><b>Cliquez pour voir les statistiques détaillées par set</b></summary>
+<summary><b>Cliquez pour voir les statistiques detaillees par set</b></summary>
 
 ${setTableMarkdown}
 </details>
 
-*Dernière mise à jour automatique des statistiques : ${new Date().toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}*
+*Derniere mise a jour automatique des statistiques : ${new Date().toLocaleDateString('fr-FR')} a ${new Date().toLocaleTimeString('fr-FR')}*
 `;
 }
 
