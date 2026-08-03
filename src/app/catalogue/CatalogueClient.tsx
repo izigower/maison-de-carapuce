@@ -254,12 +254,30 @@ export default function CatalogueClient({
             </div>
           )}
 
+          {facets.missing_image > 0 && (
+            <div>
+              <div style={labelStyle}>Appel à contribution</div>
+              <button
+                onClick={() => navigate({ ...params, missingImage: params.missingImage ? null : true, page: 1 })}
+                style={{
+                  ...chipStyle(Boolean(params.missingImage)),
+                  ...(params.missingImage
+                    ? { background: p.brass, borderColor: p.brass, color: p.bg }
+                    : { borderColor: p.brass, color: p.brass }),
+                }}>
+                Sans visuel
+                <span style={{ opacity: 0.65, marginLeft: 6 }}>{facets.missing_image}</span>
+              </button>
+            </div>
+          )}
+
           {active && (
             <div style={{ alignSelf: 'flex-end' }}>
               <button
                 onClick={() => { lastPushed.current = ''; setDraft(''); navigate({
                   q: '', langs: [], variants: [], owned: null,
-                  yearMin: null, yearMax: null, sort: params.sort, page: 1,
+                  yearMin: null, yearMax: null, missingImage: null,
+                  sort: params.sort, page: 1,
                 }); }}
                 style={{ ...chipStyle(false), borderColor: p.brass, color: p.brass }}>
                 Réinitialiser les filtres

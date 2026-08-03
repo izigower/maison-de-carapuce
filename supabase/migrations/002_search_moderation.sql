@@ -108,6 +108,7 @@ CREATE INDEX IF NOT EXISTS cards_variant_idx ON cards (variant);
 -- ============================================================
 
 DROP FUNCTION IF EXISTS search_cards(TEXT, TEXT[], TEXT[], BOOLEAN, INT, INT, TEXT, INT, INT);
+DROP FUNCTION IF EXISTS search_cards(TEXT, TEXT[], TEXT[], BOOLEAN, INT, INT, TEXT, INT, INT, BOOLEAN);
 CREATE FUNCTION search_cards(
   q          TEXT    DEFAULT '',
   langs      TEXT[]  DEFAULT NULL,
@@ -117,7 +118,9 @@ CREATE FUNCTION search_cards(
   year_max   INT     DEFAULT NULL,
   sort       TEXT    DEFAULT 'year_asc',
   lim        INT     DEFAULT 60,
-  off        INT     DEFAULT 0
+  off        INT     DEFAULT 0,
+  -- TRUE = uniquement les fiches sans aucun visuel (appel à contribution).
+  missing_image BOOLEAN DEFAULT NULL
 )
 RETURNS TABLE (
   id TEXT, set_name TEXT, year INTEGER, lang TEXT, country TEXT,
@@ -148,6 +151,8 @@ AS $$
       AND (owned    IS NULL OR c.is_owned = owned)
       AND (year_min IS NULL OR c.year >= year_min)
       AND (year_max IS NULL OR c.year <= year_max)
+      AND (missing_image IS NULL OR missing_image = (
+             c.scan_url IS NULL AND c.image_url IS NULL AND c.official_image_url IS NULL))
   )
   SELECT
     m.id, m.set_name, m.year, m.lang, m.country,
@@ -189,7 +194,10 @@ AS $$
                   'max', (SELECT MAX(year) FROM cards)
                 ),
     'total',    (SELECT COUNT(*) FROM cards),
-    'owned',    (SELECT COUNT(*) FROM cards WHERE is_owned)
+    'owned',    (SELECT COUNT(*) FROM cards WHERE is_owned),
+    'missing_image', (SELECT COUNT(*) FROM cards
+                       WHERE scan_url IS NULL AND image_url IS NULL
+                         AND official_image_url IS NULL)
   );
 $$;
 

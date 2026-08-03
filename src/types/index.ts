@@ -83,6 +83,7 @@ export interface CatalogueFacets {
   years: { min: number | null; max: number | null };
   total: number;
   owned: number;
+  missing_image: number;
 }
 
 /** Filtres de recherche, sérialisés dans l'URL du catalogue. */
@@ -93,6 +94,8 @@ export interface SearchParamsShape {
   owned: boolean | null;
   yearMin: number | null;
   yearMax: number | null;
+  /** true = seulement les fiches sans visuel. */
+  missingImage: boolean | null;
   sort: 'year_asc' | 'year_desc' | 'set_asc';
   page: number;
 }

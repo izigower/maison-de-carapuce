@@ -14,7 +14,8 @@ interface Props {
 }
 
 const EMPTY_FACETS: CatalogueFacets = {
-  langs: [], variants: [], years: { min: null, max: null }, total: 0, owned: 0,
+  langs: [], variants: [], years: { min: null, max: null },
+  total: 0, owned: 0, missing_image: 0,
 };
 
 export default async function CataloguePage({ searchParams }: Props) {
@@ -32,6 +33,7 @@ export default async function CataloguePage({ searchParams }: Props) {
       sort: params.sort,
       lim: PAGE_SIZE,
       off: (params.page - 1) * PAGE_SIZE,
+      missing_image: params.missingImage,
     }),
     supabase.rpc('get_catalogue_facets'),
   ]);

@@ -39,6 +39,17 @@ UNION ALL SELECT 'owned=true', count(*) FROM search_cards('', NULL, NULL, TRUE)
 UNION ALL SELECT 'annees 1996-2000', count(*) FROM search_cards('', NULL, NULL, NULL, 1996, 2000);
 
 \echo ''
+\echo '=== 4 bis. FILTRE "SANS VISUEL" (appel a contribution) ==='
+-- On lit total_count (total reel) et non count(*), plafonne a 200 lignes/page.
+SELECT
+  (SELECT DISTINCT total_count FROM search_cards('',NULL,NULL,NULL,NULL,NULL,'year_asc',1,0)) AS toutes,
+  (SELECT DISTINCT total_count FROM search_cards('',NULL,NULL,NULL,NULL,NULL,'year_asc',1,0,TRUE))  AS sans_visuel,
+  (SELECT DISTINCT total_count FROM search_cards('',NULL,NULL,NULL,NULL,NULL,'year_asc',1,0,FALSE)) AS avec_visuel;
+\echo '    ^ sans_visuel + avec_visuel doit egaler toutes'
+\echo '-- coherence avec la facette :'
+SELECT get_catalogue_facets()->'missing_image' AS facette_sans_visuel;
+
+\echo ''
 \echo '=== 5. TOTAL_COUNT ET PAGINATION ==='
 \echo '-- total_count doit valoir le total global, pas la taille de page :'
 SELECT DISTINCT total_count AS total_reel, count(*) OVER () AS lignes_page

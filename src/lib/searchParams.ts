@@ -29,6 +29,7 @@ export function parseSearchParams(raw: RawParams): SearchParamsShape {
     owned: ownedRaw === '1' ? true : ownedRaw === '0' ? false : null,
     yearMin: int(raw.from),
     yearMax: int(raw.to),
+    missingImage: first(raw.sansvisuel) === '1' ? true : null,
     sort: SORTS.includes(sortRaw) ? sortRaw : 'year_asc',
     page: Math.max(1, int(raw.page) ?? 1),
   };
@@ -43,6 +44,7 @@ export function toQueryString(s: SearchParamsShape): string {
   if (s.owned !== null) p.set('owned', s.owned ? '1' : '0');
   if (s.yearMin !== null) p.set('from', String(s.yearMin));
   if (s.yearMax !== null) p.set('to', String(s.yearMax));
+  if (s.missingImage) p.set('sansvisuel', '1');
   if (s.sort !== 'year_asc') p.set('sort', s.sort);
   if (s.page > 1) p.set('page', String(s.page));
   return p.toString();
@@ -51,6 +53,7 @@ export function toQueryString(s: SearchParamsShape): string {
 export function hasActiveFilters(s: SearchParamsShape): boolean {
   return Boolean(
     s.q || s.langs.length || s.variants.length ||
-    s.owned !== null || s.yearMin !== null || s.yearMax !== null
+    s.owned !== null || s.yearMin !== null || s.yearMax !== null ||
+    s.missingImage
   );
 }
