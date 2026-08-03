@@ -14,15 +14,42 @@
 2. Choisir un nom, un mot de passe fort, une région (Europe West)
 
 ### Appliquer le schéma
-Dans l'éditeur SQL de Supabase (Database → SQL Editor) :
-```sql
--- Coller le contenu de supabase/migrations/001_initial.sql
-```
+Dans l'éditeur SQL de Supabase (Database → SQL Editor), **dans cet ordre** :
 
-### Insérer les données de départ
+| # | Fichier | Rôle |
+|---|---------|------|
+| 1 | `supabase/migrations/001_initial.sql` | Tables de base |
+| 2 | `supabase/migrations/002_search_moderation.sql` | Recherche, modération, correctifs de sécurité |
+| 3 | `supabase/seed.sql` | 24 cartes saisies à la main |
+| 4 | `supabase/seed_tcgdex.sql` | 186 cartes importées de TCGdex |
+
+> **002 est obligatoire.** Sans lui, la page catalogue affiche une erreur (la
+> recherche passe par la fonction `search_cards`) et deux failles restent
+> ouvertes : n'importe quel compte peut écrire dans le catalogue, et lire les
+> emails de tous les contributeurs.
+
+### Se nommer conservateur
+Crée ton compte sur `/auth`, puis, dans le SQL Editor :
 ```sql
--- Coller le contenu de supabase/seed.sql
+UPDATE profiles SET is_admin = TRUE
+ WHERE id = (SELECT id FROM auth.users WHERE email = 'ton@email.fr');
 ```
+Le lien **Conservation** apparaît alors dans la navigation, et donne accès à `/admin`.
+
+### Régénérer le catalogue depuis TCGdex
+```bash
+node scripts/import-tcgdex.mjs      # réécrit supabase/seed_tcgdex.sql
+```
+Le seed est ré-exécutable : il met à jour les fiches existantes sans toucher aux
+contributions communautaires.
+
+### Tester les migrations avant de les appliquer
+```bash
+./supabase/tests/run.sh    # nécessite Docker ; n'touche pas à la prod
+```
+Rejoue tout le schéma sur un Postgres jetable et vérifie la recherche
+(accents, multi-mots, filtres, pagination) puis la sécurité (RLS, modération,
+escalade de privilèges).
 
 ### Récupérer les clés
 Settings → API :
@@ -34,10 +61,10 @@ Authentication → URL Configuration :
 - Site URL : `https://ton-projet.vercel.app`
 - Redirect URLs : `https://ton-projet.vercel.app/auth/callback`
 
-### Storage (pour les photos de cartes)
-Storage → New bucket :
-- Nom : `card-photos`
-- Public : ✓
+### Storage (scans communautaires)
+Le bucket `scans` et ses règles d'accès sont créés par `002_search_moderation.sql`.
+Rien à faire à la main. Lecture publique, dépôt réservé aux comptes connectés,
+suppression réservée aux conservateurs.
 
 ---
 
@@ -81,20 +108,28 @@ Ouvrir [http://localhost:3000](http://localhost:3000).
 
 | URL | Description |
 |-----|-------------|
-| `/` | Accueil — stats animées + acquisitions récentes |
-| `/catalogue` | Catalogue avec filtres langue/recherche |
+| `/` | Accueil — stats + acquisitions récentes |
+| `/catalogue` | Recherche, filtres langue/variante/période, pagination |
 | `/carte/[id]` | Détail d'une carte |
-| `/contribuer` | Formulaires de contribution (3 voies) |
+| `/contribuer` | Formulaires de contribution (3 voies) + dépôt de scan |
 | `/donateurs` | Classement des contributeurs |
+| `/admin` | Salle de conservation — modération (conservateurs uniquement) |
 | `/auth` | Connexion / inscription |
 | `/auth/callback` | Callback OAuth/email (géré automatiquement) |
 
 ---
 
-## Ajouter de vrais scans de cartes
+## Les visuels de carte
 
-1. Dans Supabase Storage → `card-photos`, uploader le scan
-2. Copier l'URL publique
-3. Dans Database → `cards`, mettre à jour le champ `image_url` pour la carte concernée
+Trois sources, par ordre de priorité (`src/lib/cardImage.ts`) :
 
-Le placeholder SVG est remplacé automatiquement dès qu'une URL est présente.
+1. **`scan_url`** — scan déposé par un contributeur (bucket `scans`)
+2. **`image_url`** — image posée à la main sur la fiche
+3. **`official_image_url`** — visuel de référence TCGdex
+
+Si aucune n'est renseignée, le placeholder aquatique s'affiche — c'est le cas de
+39 des 186 cartes importées, surtout en allemand et en italien. Ce sont
+exactement les fiches où un scan communautaire a le plus de valeur.
+
+Les URLs TCGdex n'ont pas d'extension : `tcgdexImage()` suffixe `/high.png` ou
+`/low.webp` selon le contexte.

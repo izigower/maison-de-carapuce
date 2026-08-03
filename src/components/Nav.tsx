@@ -13,10 +13,13 @@ const NAV_ITEMS = [
   { href: '/contribuer', label: 'Contribuer' },
 ];
 
-export default function Nav({ user }: { user: User | null }) {
+export default function Nav({ user, isCurator = false }: { user: User | null; isCurator?: boolean }) {
   const pathname = usePathname();
   const router = useRouter();
   const supabase = createClient();
+  const items = isCurator
+    ? [...NAV_ITEMS, { href: '/admin', label: 'Conservation' }]
+    : NAV_ITEMS;
 
   async function handleAuth() {
     if (user) {
@@ -62,7 +65,7 @@ export default function Nav({ user }: { user: User | null }) {
       </Link>
 
       <nav style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
-        {NAV_ITEMS.map(item => {
+        {items.map(item => {
           const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
           return (
             <Link key={item.href} href={item.href} style={{

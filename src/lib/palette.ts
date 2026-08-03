@@ -29,6 +29,9 @@ export const VARIANT_COLORS: Record<string, string> = {
   Unlimited: '#5a5e6a',
   'Dark Squirtle': '#3a3060',
   'Carapuce Obscur': '#3a3060',
+  // Libellés produits par l'import TCGdex
+  Normale: '#5a5e6a',
+  Promo: '#d8a050',
 };
 
 export const CARD_VARIANTS = [

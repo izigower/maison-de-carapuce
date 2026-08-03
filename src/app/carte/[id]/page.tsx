@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/server';
 import CardPlaceholder from '@/components/CardPlaceholder';
 import WishlistButton from '@/components/WishlistButton';
 import { p } from '@/lib/palette';
+import { resolveCardImage } from '@/lib/cardImage';
 import type { Card } from '@/types';
 
 interface Props {
@@ -13,8 +14,32 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from('cards')
+    .select('set_name, year, lang, variant, card_number, official_image_url, scan_url, image_url')
+    .eq('id', id)
+    .single();
+
+  if (!data) return { title: `Carte introuvable — La Maison de Carapuce` };
+
+  const title = `Carapuce — ${data.set_name} (${data.lang}, ${data.variant})`;
+  const description =
+    `Carapuce n°${data.card_number} du set ${data.set_name}` +
+    `${data.year ? ` (${data.year})` : ''}, édition ${data.lang}, variante ${data.variant}. ` +
+    `Fiche de l'archive collaborative La Maison de Carapuce.`;
+
+  const preview = resolveCardImage(data, 'high');
+
   return {
-    title: `${id} — La Maison de Carapuce`,
+    title: `${title} — La Maison de Carapuce`,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      images: preview ? [preview.src] : undefined,
+    },
   };
 }
 
@@ -44,15 +69,19 @@ export default async function CardDetailPage({ params }: Props) {
 
   const card: Card = data;
 
-  const fields = [
-    ['Année', card.year],
+  const image = resolveCardImage(card, 'high');
+
+  const fields: Array<[string, string | number]> = [
+    ['Année', card.year ?? 'inconnue'],
     ['Langue', card.lang],
     ["Pays d'édition", card.country],
     ['Numéro', card.card_number],
     ['Rareté', card.rarity],
     ['Variante', card.variant],
-    ['Identifiant interne', card.id],
-  ] as const;
+  ];
+  if (card.name_local) fields.push(['Nom imprimé', card.name_local]);
+  if (card.illustrator) fields.push(['Illustration', card.illustrator]);
+  fields.push(['Identifiant interne', card.id]);
 
   return (
     <main style={{ padding: '40px 56px 120px' }}>
@@ -61,8 +90,21 @@ export default async function CardDetailPage({ params }: Props) {
       </Link>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, marginTop: 40 }}>
-        <div style={{ aspectRatio: '3/4', position: 'relative' }}>
-          <CardPlaceholder card={card} variant="hero" large owned={card.is_owned} />
+        <div>
+          <div style={{ aspectRatio: '3/4', position: 'relative' }}>
+            <CardPlaceholder card={card} variant="hero" large owned={card.is_owned} />
+          </div>
+          <div style={{ marginTop: 14, fontSize: 11, color: p.inkSoft, lineHeight: 1.6 }}>
+            {image?.kind === 'official' && <>Visuel de référence — base communautaire TCGdex.</>}
+            {image?.kind === 'scan' && <>Scan déposé par un contributeur de la Maison.</>}
+            {!image && (
+              <>
+                Aucun visuel pour cette carte.{' '}
+                <Link href="/contribuer" style={{ color: p.water }}>Envoie ton scan</Link> pour
+                compléter la notice.
+              </>
+            )}
+          </div>
         </div>
 
         <div>
@@ -112,9 +154,11 @@ export default async function CardDetailPage({ params }: Props) {
             </p>
           )}
 
-          <div style={{ marginTop: 50, display: 'flex', gap: 12 }}>
+          <div style={{ marginTop: 50, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <WishlistButton cardId={card.id} isLoggedIn={!!user} />
-            <button style={museumBtn(false)}>Signaler une variante</button>
+            <Link href={`/contribuer?card=${encodeURIComponent(card.id)}`} style={museumBtn(false)}>
+              Signaler une erreur
+            </Link>
           </div>
         </div>
       </div>

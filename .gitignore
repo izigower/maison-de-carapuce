@@ -37,3 +37,6 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Artefact de debug de l'import TCGdex (le .sql fait foi)
+supabase/seed_tcgdex.json

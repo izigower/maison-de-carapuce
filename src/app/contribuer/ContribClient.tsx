@@ -1,11 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 import CardPlaceholder from '@/components/CardPlaceholder';
 import { p } from '@/lib/palette';
 import { createClient } from '@/lib/supabase/client';
-import type { Card } from '@/types';
+import type { Card, SimilarCard } from '@/types';
+
+const MAX_SCAN_BYTES = 8 * 1024 * 1024;
+const ACCEPTED = ['image/jpeg', 'image/png', 'image/webp'];
 
 const VARIANTS = ['wave', 'drop', 'shell', 'ripple', 'depth', 'current'] as const;
 
@@ -27,11 +30,17 @@ function FormField({
   placeholder,
   textarea,
   name,
+  onBlur,
+  required,
+  type = 'text',
 }: {
   label: string;
   placeholder: string;
   textarea?: boolean;
   name: string;
+  onBlur?: () => void;
+  required?: boolean;
+  type?: string;
 }) {
   const baseStyle: React.CSSProperties = {
     width: '100%',
@@ -49,28 +58,121 @@ function FormField({
     <label style={{ display: 'block', fontSize: 11, letterSpacing: 2, textTransform: 'uppercase', color: p.inkSoft }}>
       {label}
       {textarea ? (
-        <textarea name={name} placeholder={placeholder} rows={4} style={{ ...baseStyle, resize: 'vertical' }} />
+        <textarea name={name} placeholder={placeholder} rows={4} onBlur={onBlur}
+          required={required} style={{ ...baseStyle, resize: 'vertical' }} />
       ) : (
-        <input name={name} placeholder={placeholder} style={baseStyle} />
+        <input name={name} type={type} placeholder={placeholder} onBlur={onBlur}
+          required={required} style={baseStyle} />
       )}
     </label>
   );
 }
 
-function ContribFormCard() {
+/** Aperçu des cartes déjà recensées qui ressemblent à la saisie en cours. */
+function DuplicateWarning({ matches }: { matches: SimilarCard[] }) {
+  if (matches.length === 0) return null;
+  return (
+    <div style={{
+      marginTop: 20, padding: '16px 20px',
+      border: `1px solid ${p.brass}`, background: 'rgba(160,122,58,0.06)',
+    }}>
+      <div style={{ fontSize: 10, letterSpacing: 2.4, textTransform: 'uppercase', color: p.brass, marginBottom: 10 }}>
+        Déjà dans l&apos;archive ?
+      </div>
+      <div style={{ fontSize: 13, color: p.inkSoft, marginBottom: 12, lineHeight: 1.55 }}>
+        Ces fiches ressemblent à ta saisie. Si l&apos;une correspond, inutile de la
+        recenser — mais une <strong>variante différente</strong> (reverse, édition 1,
+        autre langue) mérite bien sa propre fiche.
+      </div>
+      <ul style={{ listStyle: 'none', display: 'grid', gap: 6, fontSize: 13 }}>
+        {matches.map(m => (
+          <li key={m.id}>
+            <Link href={`/carte/${m.id}`} target="_blank" style={{ color: p.water, textDecoration: 'none' }}>
+              {m.set_name} · {m.lang} · {m.card_number} · {m.variant}
+              {m.year ? ` (${m.year})` : ''} ↗
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ContribFormCard({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [matches, setMatches] = useState<SimilarCard[]>([]);
+  const [scan, setScan] = useState<{ file: File; preview: string } | null>(null);
+  const [scanError, setScanError] = useState<string | null>(null);
+  const [uploading, setUploading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
   const supabase = createClient();
+
+  /** Cherche les doublons dès que le set / le numéro / la langue sont renseignés. */
+  async function checkDuplicates() {
+    const form = formRef.current;
+    if (!form) return;
+    const fd = new FormData(form);
+    const setName = String(fd.get('set_name') ?? '').trim();
+    const number = String(fd.get('card_number') ?? '').trim();
+    const lang = String(fd.get('lang') ?? '').trim();
+    if (!setName && !number) { setMatches([]); return; }
+
+    const { data } = await supabase.rpc('find_similar_cards', {
+      p_set_name: setName,
+      p_card_number: number,
+      p_lang: lang,
+    });
+    setMatches((data as SimilarCard[]) ?? []);
+  }
+
+  function pickScan(file: File | undefined) {
+    setScanError(null);
+    if (!file) return;
+    if (!ACCEPTED.includes(file.type)) {
+      setScanError('Format accepté : JPG, PNG ou WebP.');
+      return;
+    }
+    if (file.size > MAX_SCAN_BYTES) {
+      setScanError(`Fichier trop lourd (${(file.size / 1e6).toFixed(1)} Mo, max 8 Mo).`);
+      return;
+    }
+    setScan({ file, preview: URL.createObjectURL(file) });
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('loading');
+    setErrorMsg(null);
+
     const fd = new FormData(e.currentTarget);
-    const data = Object.fromEntries(fd.entries());
-    const { error } = await supabase.from('contributions').insert({
-      type: 'card',
-      data,
-    });
-    setStatus(error ? 'error' : 'done');
+    const data = Object.fromEntries(fd.entries()) as Record<string, unknown>;
+    delete data.scan; // le fichier est envoyé au Storage, pas dans le JSON
+
+    if (scan) {
+      setUploading(true);
+      const ext = scan.file.name.split('.').pop()?.toLowerCase() || 'jpg';
+      const path = `contributions/${crypto.randomUUID()}.${ext}`;
+      const { error: upErr } = await supabase.storage
+        .from('scans')
+        .upload(path, scan.file, { cacheControl: '3600', upsert: false });
+      setUploading(false);
+
+      if (upErr) {
+        setStatus('error');
+        setErrorMsg(`Envoi du scan impossible : ${upErr.message}`);
+        return;
+      }
+      data.scan_url = supabase.storage.from('scans').getPublicUrl(path).data.publicUrl;
+    }
+
+    const { error } = await supabase.from('contributions').insert({ type: 'card', data });
+    if (error) {
+      setStatus('error');
+      setErrorMsg(error.message);
+      return;
+    }
+    setStatus('done');
   }
 
   if (status === 'done') {
@@ -87,43 +189,83 @@ function ContribFormCard() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form ref={formRef} onSubmit={handleSubmit}>
       <div style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontSize: 28, marginBottom: 8 }}>
         Recenser une carte
       </div>
       <div style={{ color: p.inkSoft, fontSize: 13, marginBottom: 28 }}>
-        Tous les champs sauf indication sont requis.
+        Renseigne au minimum le set, l&apos;année, la langue et le numéro. Un conservateur
+        vérifie avant publication.
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-        <FormField label="Nom du set" placeholder="ex. Set de Base, Évolutions…" name="set_name" />
-        <FormField label="Année" placeholder="1999" name="year" />
-        <FormField label="Langue" placeholder="FR / EN / JP / DE…" name="lang" />
-        <FormField label="Numéro de carte" placeholder="63/102" name="card_number" />
+        <FormField label="Nom du set" placeholder="ex. Set de Base, Évolutions…" name="set_name" onBlur={checkDuplicates} required />
+        <FormField label="Année" placeholder="1999" name="year" type="number" required />
+        <FormField label="Langue" placeholder="FR / EN / JP / DE…" name="lang" onBlur={checkDuplicates} required />
+        <FormField label="Numéro de carte" placeholder="63/102" name="card_number" onBlur={checkDuplicates} required />
         <FormField label="Variante" placeholder="Édition 1, Reverse, Shadowless…" name="variant" />
         <FormField label="Pays d'édition" placeholder="FR" name="country" />
       </div>
       <div style={{ marginTop: 24 }}>
         <FormField label="Notes (optionnel)" placeholder="Tout ce qui vous semble important." textarea name="note" />
       </div>
-      <div style={{
-        marginTop: 24,
-        padding: '20px 24px',
-        border: `1.5px dashed ${p.rule}`,
-        textAlign: 'center',
-        color: p.inkSoft,
-        fontSize: 13,
-      }}>
-        Glissez-déposez les photos recto/verso ici (300 dpi recommandé)
+
+      <DuplicateWarning matches={matches} />
+
+      {/* ---------- Scan ---------- */}
+      <div style={{ marginTop: 24 }}>
+        <div style={{ fontSize: 11, letterSpacing: 2, textTransform: 'uppercase', color: p.inkSoft, marginBottom: 10 }}>
+          Photo / scan {isLoggedIn ? '(optionnel)' : ''}
+        </div>
+
+        {!isLoggedIn ? (
+          <div style={{
+            padding: '18px 22px', border: `1.5px dashed rgba(26,31,44,0.3)`,
+            color: p.inkSoft, fontSize: 13, lineHeight: 1.55,
+          }}>
+            <Link href="/auth" style={{ color: p.water }}>Connecte-toi</Link> pour joindre
+            un scan. Sans compte, tu peux quand même envoyer la fiche — on ajoutera
+            l&apos;image plus tard.
+          </div>
+        ) : scan ? (
+          <div style={{ display: 'flex', gap: 18, alignItems: 'flex-start', border: `1px solid ${p.rule}`, padding: 16 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={scan.preview} alt="Aperçu du scan"
+              style={{ width: 96, height: 128, objectFit: 'contain', background: p.bg, flexShrink: 0 }} />
+            <div style={{ fontSize: 13, color: p.inkSoft, flex: 1 }}>
+              <div style={{ color: p.ink, wordBreak: 'break-all' }}>{scan.file.name}</div>
+              <div style={{ marginTop: 4 }}>{(scan.file.size / 1e6).toFixed(2)} Mo</div>
+              <button type="button"
+                onClick={() => { URL.revokeObjectURL(scan.preview); setScan(null); }}
+                style={{ ...museumBtn(false), marginTop: 12, padding: '7px 14px', fontSize: 12 }}>
+                Retirer
+              </button>
+            </div>
+          </div>
+        ) : (
+          <label style={{
+            display: 'block', padding: '22px 24px', textAlign: 'center',
+            border: `1.5px dashed rgba(26,31,44,0.35)`, color: p.inkSoft,
+            fontSize: 13, cursor: 'pointer',
+          }}>
+            Choisir une photo recto (JPG, PNG ou WebP — 8 Mo max, 300 dpi recommandé)
+            <input type="file" name="scan" accept={ACCEPTED.join(',')}
+              onChange={e => pickScan(e.target.files?.[0])}
+              style={{ display: 'none' }} />
+          </label>
+        )}
+
+        {scanError && <div style={{ marginTop: 10, color: '#a8485a', fontSize: 13 }}>{scanError}</div>}
       </div>
+
       {status === 'error' && (
-        <div style={{ marginTop: 16, color: '#a8485a', fontSize: 13 }}>
-          Une erreur est survenue. Réessayez ou contactez-nous.
+        <div style={{ marginTop: 16, padding: '12px 16px', border: '1px solid #a8485a', color: '#a8485a', fontSize: 13 }}>
+          {errorMsg ?? 'Une erreur est survenue. Réessayez ou contactez-nous.'}
         </div>
       )}
+
       <div style={{ marginTop: 32, display: 'flex', justifyContent: 'flex-end', gap: 12 }}>
-        <button type="button" style={museumBtn(false)}>Sauvegarder en brouillon</button>
         <button type="submit" disabled={status === 'loading'} style={museumBtn(true)}>
-          {status === 'loading' ? 'Envoi…' : 'Soumettre pour validation'}
+          {uploading ? 'Envoi du scan…' : status === 'loading' ? 'Envoi…' : 'Soumettre pour validation'}
         </button>
       </div>
     </form>
@@ -323,7 +465,13 @@ function OwnedCollectionPreview({ ownedCards }: { ownedCards: Card[] }) {
   );
 }
 
-export default function ContribClient({ ownedCards }: { ownedCards: Card[] }) {
+export default function ContribClient({
+  ownedCards,
+  isLoggedIn,
+}: {
+  ownedCards: Card[];
+  isLoggedIn: boolean;
+}) {
   const [step, setStep] = useState(1);
 
   const VOIES = [
@@ -380,7 +528,7 @@ export default function ContribClient({ ownedCards }: { ownedCards: Card[] }) {
       </div>
 
       <div style={{ marginTop: 60, padding: 40, border: `1px solid ${p.rule}`, background: p.card }}>
-        {step === 1 && <ContribFormCard />}
+        {step === 1 && <ContribFormCard isLoggedIn={isLoggedIn} />}
         {step === 2 && <ContribFormItem />}
         {step === 3 && <ContribFormCorrection />}
       </div>

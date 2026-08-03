@@ -10,12 +10,13 @@ export const metadata: Metadata = {
 
 export default async function ContribuerPage() {
   const supabase = await createClient();
-  const { data } = await supabase
-    .from('cards')
-    .select('*')
-    .eq('is_owned', true);
+
+  const [{ data }, { data: { user } }] = await Promise.all([
+    supabase.from('cards').select('*').eq('is_owned', true),
+    supabase.auth.getUser(),
+  ]);
 
   const ownedCards: Card[] = data ?? [];
 
-  return <ContribClient ownedCards={ownedCards} />;
+  return <ContribClient ownedCards={ownedCards} isLoggedIn={!!user} />;
 }

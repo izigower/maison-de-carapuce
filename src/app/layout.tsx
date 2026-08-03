@@ -37,10 +37,21 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     data: { user },
   } = await supabase.auth.getUser();
 
+  // Le lien vers la salle de conservation n'apparaît que pour les conservateurs.
+  let isCurator = false;
+  if (user) {
+    const { data } = await supabase
+      .from('profiles')
+      .select('is_admin')
+      .eq('id', user.id)
+      .single();
+    isCurator = Boolean(data?.is_admin);
+  }
+
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <body>
-        <Nav user={user} />
+        <Nav user={user} isCurator={isCurator} />
         {children}
         <Footer />
       </body>
