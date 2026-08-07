@@ -34,6 +34,16 @@ const FIELD_LABELS: Record<string, string> = {
   receipt: 'Accusé',
 };
 
+/** Les RPC renvoient des codes stables ; on les traduit pour l'écran. */
+function humanError(raw: string): string {
+  if (raw.includes('insufficient_privilege')) return "Ton compte n'a pas les droits de conservation.";
+  if (raw.includes('contribution_already_processed')) return 'Cette contribution a déjà été traitée.';
+  if (raw.includes('contribution_not_found')) return 'Contribution introuvable ou déjà traitée.';
+  const year = raw.match(/invalid_year: (.*)/);
+  if (year) return `Année invalide (« ${year[1].trim()} ») — corrige la fiche avant d'approuver.`;
+  return raw;
+}
+
 function btn(primary: boolean, tone: 'ink' | 'danger' = 'ink'): React.CSSProperties {
   const color = tone === 'danger' ? '#a8485a' : p.ink;
   return {
@@ -61,19 +71,18 @@ function ContributionCard({
   const [error, setError] = useState<string | null>(null);
   const [rejecting, setRejecting] = useState(false);
   const [reason, setReason] = useState('');
-  const [cardId, setCardId] = useState('');
 
   const data = (c.data ?? {}) as Record<string, unknown>;
   const entries = Object.entries(data).filter(([, v]) => v !== '' && v != null);
 
   async function approve() {
     setBusy(true); setError(null);
-    const { data: newId, error } = await supabase.rpc('approve_contribution', {
-      p_id: c.id,
-      p_card_id: cardId.trim() || null,
+    const { data: res, error } = await supabase.rpc('approve_contribution', {
+      contribution_id: c.id,
     });
     setBusy(false);
-    if (error) { setError(error.message); return; }
+    if (error) { setError(humanError(error.message)); return; }
+    const newId = (res as { created_card_id?: string } | null)?.created_card_id;
     onDone(c.id, newId ? `Fiche ${newId} créée.` : 'Contribution approuvée.');
     router.refresh();
   }
@@ -81,11 +90,11 @@ function ContributionCard({
   async function reject() {
     setBusy(true); setError(null);
     const { error } = await supabase.rpc('reject_contribution', {
-      p_id: c.id,
-      p_reason: reason.trim() || null,
+      contribution_id: c.id,
+      reason: reason.trim() || null,
     });
     setBusy(false);
-    if (error) { setError(error.message); return; }
+    if (error) { setError(humanError(error.message)); return; }
     onDone(c.id, 'Contribution rejetée.');
     router.refresh();
   }
@@ -125,20 +134,10 @@ function ContributionCard({
       </table>
 
       {c.type === 'card' && (
-        <label style={{ display: 'block', marginTop: 20, fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: p.inkSoft }}>
-          Identifiant de fiche (laisser vide = généré automatiquement)
-          <input
-            value={cardId}
-            onChange={e => setCardId(e.target.value)}
-            placeholder="ex. BASE1-63-FR-EDITION-1"
-            style={{
-              display: 'block', width: '100%', marginTop: 7, padding: '9px 0',
-              border: 'none', borderBottom: `1px solid rgba(26,31,44,0.25)`,
-              background: 'transparent', fontSize: 14, color: p.ink, outline: 'none',
-              fontFamily: 'ui-monospace, Menlo, monospace',
-            }}
-          />
-        </label>
+        <div style={{ marginTop: 18, fontSize: 12, color: p.inkSoft, lineHeight: 1.55 }}>
+          À l&apos;approbation, la fiche est créée avec <code>verification_status = pending</code> :
+          elle entre dans ton pipeline de vérification, elle n&apos;est pas publiée telle quelle.
+        </div>
       )}
 
       {error && (

@@ -15,16 +15,15 @@ export const normalize = (s: unknown): string =>
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase();
 
+/** Mêmes champs que le trigger cards_refresh_search_text côté Postgres. */
 function haystack(c: Card): string {
   return normalize([
-    c.id, c.set_name, c.set_id, c.name_local, c.year,
-    c.lang, c.country, c.card_number, c.rarity, c.variant,
-    c.illustrator, c.note,
+    c.id, c.set_name, c.year, c.lang, c.country,
+    c.card_number, c.rarity, c.variant, c.note, c.source,
   ].filter(Boolean).join(' '));
 }
 
-const hasImage = (c: Card): boolean =>
-  Boolean(c.scan_url || c.image_url || c.official_image_url);
+const hasImage = (c: Card): boolean => Boolean(c.image_url);
 
 export function filterCards(cards: Card[], p: SearchParamsShape): Card[] {
   const tokens = normalize(p.q).split(' ').filter(Boolean);

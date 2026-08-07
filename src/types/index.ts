@@ -1,26 +1,28 @@
+/** Rôles applicatifs (colonne profiles.role). */
+export type Role = 'user' | 'mod' | 'admin';
+
+/** Un conservateur = admin ou modérateur (cf. fonction SQL is_admin()). */
+export const isCurator = (role: string | null | undefined): boolean =>
+  role === 'admin' || role === 'mod';
+
 export interface Card {
   id: string;
   set_name: string;
-  /** NULL pour les sets promo dont la date de sortie est inconnue. */
-  year: number | null;
+  year: number;
   lang: string;
   country: string;
   card_number: string;
   rarity: string;
   variant: string;
   note: string;
-  /** Image déposée directement sur la fiche. */
+  /** Visuel recto — URL complète (TCGdex, Pokécardex, PriceCharting, scan…). */
   image_url: string | null;
-  /** Visuel de référence TCGdex (URL sans extension, cf. lib/cardImage). */
-  official_image_url: string | null;
-  /** Scan envoyé par un contributeur (Supabase Storage). */
-  scan_url: string | null;
+  back_image_url: string | null;
   is_owned: boolean;
-  is_verified: boolean;
-  source: 'manual' | 'tcgdex' | 'community';
-  name_local: string | null;
-  illustrator: string | null;
-  set_id: string | null;
+  verification_status: 'pending' | 'verified' | 'disputed' | 'rejected';
+  pipeline_status: 'draft' | 'sourced' | 'image_ok' | 'verified' | 'live' | 'rejected';
+  source: string | null;
+  source_url: string | null;
   created_at: string;
 }
 
@@ -48,7 +50,7 @@ export interface Profile {
   id: string;
   handle: string;
   country: string;
-  is_admin: boolean;
+  role: Role;
   created_at: string;
 }
 

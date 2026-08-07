@@ -4,6 +4,7 @@ import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { createClient } from '@/lib/supabase/server';
+import { isCurator } from '@/types';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -38,20 +39,20 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   } = await supabase.auth.getUser();
 
   // Le lien vers la salle de conservation n'apparaît que pour les conservateurs.
-  let isCurator = false;
+  let curator = false;
   if (user) {
     const { data } = await supabase
       .from('profiles')
-      .select('is_admin')
+      .select('role')
       .eq('id', user.id)
       .single();
-    isCurator = Boolean(data?.is_admin);
+    curator = isCurator(data?.role);
   }
 
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <body>
-        <Nav user={user} isCurator={isCurator} />
+        <Nav user={user} isCurator={curator} />
         {children}
         <Footer />
       </body>

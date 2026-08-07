@@ -25,7 +25,7 @@ export default function CardPlaceholder({
 }: Props) {
   const [c1, c2, c3] = CARD_PALETTES[variant] || CARD_PALETTES.wave;
 
-  const image = card ? resolveCardImage(card, large ? 'high' : 'low') : null;
+  const image = card ? resolveCardImage(card) : null;
 
   if (card && image) {
     return (
@@ -45,7 +45,6 @@ export default function CardPlaceholder({
           fill
           style={{ objectFit: 'contain' }}
           sizes={large ? '(max-width: 768px) 90vw, 45vw' : '(max-width: 768px) 50vw, 25vw'}
-          unoptimized={image.kind === 'official'}
         />
         {showTags && <CardTags card={card} owned={owned} position={tagPosition} small={!large} />}
       </div>

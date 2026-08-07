@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const supabase = await createClient();
   const { data } = await supabase
     .from('cards')
-    .select('set_name, year, lang, variant, card_number, official_image_url, scan_url, image_url')
+    .select('set_name, year, lang, variant, card_number, image_url, back_image_url')
     .eq('id', id)
     .single();
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     `${data.year ? ` (${data.year})` : ''}, édition ${data.lang}, variante ${data.variant}. ` +
     `Fiche de l'archive collaborative La Maison de Carapuce.`;
 
-  const preview = resolveCardImage(data, 'high');
+  const preview = resolveCardImage(data);
 
   return {
     title: `${title} — La Maison de Carapuce`,
@@ -69,7 +69,14 @@ export default async function CardDetailPage({ params }: Props) {
 
   const card: Card = data;
 
-  const image = resolveCardImage(card, 'high');
+  const image = resolveCardImage(card);
+
+  const VERIF_LABEL: Record<string, string> = {
+    verified: 'Vérifiée',
+    pending: 'En cours de vérification',
+    disputed: 'Contestée',
+    rejected: 'Écartée',
+  };
 
   const fields: Array<[string, string | number]> = [
     ['Année', card.year ?? 'inconnue'],
@@ -78,9 +85,9 @@ export default async function CardDetailPage({ params }: Props) {
     ['Numéro', card.card_number],
     ['Rareté', card.rarity],
     ['Variante', card.variant],
+    ['Statut', VERIF_LABEL[card.verification_status] ?? card.verification_status],
   ];
-  if (card.name_local) fields.push(['Nom imprimé', card.name_local]);
-  if (card.illustrator) fields.push(['Illustration', card.illustrator]);
+  if (card.source) fields.push(['Provenance de la fiche', card.source]);
   fields.push(['Identifiant interne', card.id]);
 
   return (
@@ -95,8 +102,11 @@ export default async function CardDetailPage({ params }: Props) {
             <CardPlaceholder card={card} variant="hero" large owned={card.is_owned} />
           </div>
           <div style={{ marginTop: 14, fontSize: 11, color: p.inkSoft, lineHeight: 1.6 }}>
-            {image?.kind === 'official' && <>Visuel de référence — base communautaire TCGdex.</>}
-            {image?.kind === 'scan' && <>Scan déposé par un contributeur de la Maison.</>}
+            {image && card.source_url && (
+              <>Visuel : <a href={card.source_url} target="_blank" rel="noreferrer noopener"
+                   style={{ color: p.water }}>source ↗</a></>
+            )}
+            {image && !card.source_url && <>Visuel de référence.</>}
             {!image && (
               <>
                 Aucun visuel pour cette carte.{' '}
