@@ -19,11 +19,39 @@ export default async function AdminPage() {
 
   if (!user) redirect('/auth?next=/admin');
 
-  const { data: profile } = await supabase
+  const { data: profile, error: profileError } = await supabase
     .from('profiles')
     .select('is_admin, handle')
     .eq('id', user.id)
     .single();
+
+  // La colonne is_admin est créée par 002 : son absence signifie migration non appliquée.
+  if (profileError) {
+    return (
+      <main style={{ padding: '120px 56px', maxWidth: 680, margin: '0 auto' }}>
+        <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: p.brass, marginBottom: 16 }}>
+          Migration requise
+        </div>
+        <h1 style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontSize: 42, fontWeight: 400 }}>
+          La modération n&apos;est pas encore active
+        </h1>
+        <p style={{ color: p.inkSoft, marginTop: 20, fontSize: 15, lineHeight: 1.6 }}>
+          Applique <code>supabase/migrations/002_search_moderation.sql</code> dans le
+          SQL Editor de Supabase, puis exécute :
+        </p>
+        <pre style={{
+          marginTop: 20, padding: 18, background: p.card,
+          border: `1px solid ${p.rule}`, fontSize: 12, overflowX: 'auto',
+        }}>
+{`UPDATE profiles SET is_admin = TRUE
+ WHERE id = '${user.id}';`}
+        </pre>
+        <p style={{ color: p.inkSoft, marginTop: 16, fontSize: 13 }}>
+          Détail technique : {profileError.message}
+        </p>
+      </main>
+    );
+  }
 
   if (!profile?.is_admin) {
     return (

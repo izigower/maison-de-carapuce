@@ -51,13 +51,14 @@ export default function CatalogueClient({
   total,
   params,
   facets,
-  failed,
+  degraded,
 }: {
   cards: Card[];
   total: number;
   params: SearchParamsShape;
   facets: CatalogueFacets;
-  failed: boolean;
+  /** true = migration 002 absente, recherche calculée en JS (cf. searchFallback). */
+  degraded: boolean;
 }) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -131,9 +132,14 @@ export default function CatalogueClient({
         </div>
       </div>
 
-      {failed && (
-        <div style={{ padding: '14px 18px', border: `1px solid ${p.brass}`, marginBottom: 28, fontSize: 13 }}>
-          La recherche est indisponible. Vérifie que la migration <code>002_search_moderation.sql</code> a bien été appliquée sur Supabase.
+      {degraded && (
+        <div style={{
+          padding: '12px 16px', border: `1px solid ${p.brass}`, color: p.brass,
+          marginBottom: 28, fontSize: 12, letterSpacing: 0.2,
+        }}>
+          Mode dégradé : recherche calculée côté serveur en mémoire.
+          Applique <code>002_search_moderation.sql</code> sur Supabase pour activer
+          la recherche Postgres et la modération.
         </div>
       )}
 
