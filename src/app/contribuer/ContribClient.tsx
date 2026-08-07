@@ -8,7 +8,30 @@ import { createClient } from '@/lib/supabase/client';
 import type { Card, SimilarCard } from '@/types';
 
 const MAX_SCAN_BYTES = 8 * 1024 * 1024;
-const ACCEPTED = ['image/jpeg', 'image/png', 'image/webp'];
+const ACCEPTED = ['image/jpeg', 'image/png', 'image/webp', 'image/avif'];
+const ANNEE_MIN = 1996;
+const ANNEE_MAX = new Date().getFullYear() + 1;
+
+/**
+ * La base refuse les contributions invalides et renvoie un code stable.
+ * On les traduit ici : un contributeur doit comprendre quoi corriger.
+ */
+function messageErreur(brut: string): string {
+  const codes: Array<[RegExp, string]> = [
+    [/champs_obligatoires_manquants/, 'Il manque le set, la langue ou le numéro de carte.'],
+    [/annee_invalide/, `L'année doit être comprise entre ${ANNEE_MIN} et ${ANNEE_MAX}.`],
+    [/contribution_deja_envoyee/, 'Cette carte vient déjà d’être envoyée. Elle est dans la file de validation.'],
+    [/quota_journalier_atteint/, 'Tu as atteint la limite de 20 contributions par jour. Reviens demain — merci pour tout ça.'],
+    [/trop_de_contributions_anonymes/, 'Le site reçoit beaucoup d’envois en ce moment. Réessaie dans quelques minutes, ou connecte-toi pour passer devant.'],
+    [/payload_trop_gros|champ_trop_long/, 'Un des champs est trop long. Raccourcis les notes.'],
+    [/email_invalide/, 'L’adresse email ne semble pas valide.'],
+    [/scan_url_non_autorisee/, 'Le scan doit être envoyé via ce formulaire.'],
+    [/rejet_robot/, 'Envoi refusé. Si tu es humain, recharge la page et réessaie.'],
+    [/row-level security|permission denied/, 'Envoi refusé par le serveur. Réessaie ou contacte-nous.'],
+  ];
+  for (const [re, msg] of codes) if (re.test(brut)) return msg;
+  return brut;
+}
 
 const VARIANTS = ['wave', 'drop', 'shell', 'ripple', 'depth', 'current'] as const;
 
@@ -149,6 +172,21 @@ function ContribFormCard({ isLoggedIn }: { isLoggedIn: boolean }) {
     const data = Object.fromEntries(fd.entries()) as Record<string, unknown>;
     delete data.scan; // le fichier est envoyé au Storage, pas dans le JSON
 
+    // Mêmes règles que le serveur, mais dites tout de suite : inutile de faire
+    // téléverser un scan de 8 Mo à quelqu'un dont l'année est fausse.
+    const annee = Number(String(data.year ?? '').trim());
+    if (!Number.isInteger(annee) || annee < ANNEE_MIN || annee > ANNEE_MAX) {
+      setStatus('error');
+      setErrorMsg(`L'année doit être comprise entre ${ANNEE_MIN} et ${ANNEE_MAX}.`);
+      return;
+    }
+    if (!String(data.set_name ?? '').trim() || !String(data.lang ?? '').trim()
+        || !String(data.card_number ?? '').trim()) {
+      setStatus('error');
+      setErrorMsg('Le set, la langue et le numéro de carte sont nécessaires.');
+      return;
+    }
+
     if (scan) {
       setUploading(true);
       const ext = scan.file.name.split('.').pop()?.toLowerCase() || 'jpg';
@@ -160,7 +198,7 @@ function ContribFormCard({ isLoggedIn }: { isLoggedIn: boolean }) {
 
       if (upErr) {
         setStatus('error');
-        setErrorMsg(`Envoi du scan impossible : ${upErr.message}`);
+        setErrorMsg(`Envoi du scan impossible : ${messageErreur(upErr.message)}`);
         return;
       }
       data.scan_url = supabase.storage.from('scans').getPublicUrl(path).data.publicUrl;
@@ -169,7 +207,7 @@ function ContribFormCard({ isLoggedIn }: { isLoggedIn: boolean }) {
     const { error } = await supabase.from('contributions').insert({ type: 'card', data });
     if (error) {
       setStatus('error');
-      setErrorMsg(error.message);
+      setErrorMsg(messageErreur(error.message));
       return;
     }
     setStatus('done');
@@ -204,6 +242,17 @@ function ContribFormCard({ isLoggedIn }: { isLoggedIn: boolean }) {
         <FormField label="Numéro de carte" placeholder="63/102" name="card_number" onBlur={checkDuplicates} required />
         <FormField label="Variante" placeholder="Édition 1, Reverse, Shadowless…" name="variant" />
         <FormField label="Pays d'édition" placeholder="FR" name="country" />
+      </div>
+
+      {/*
+        Pot de miel : invisible et hors du parcours clavier, donc jamais rempli
+        par un humain. Le serveur refuse toute contribution où il est rempli.
+      */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+        <label>
+          Ne pas remplir
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+        </label>
       </div>
       <div style={{ marginTop: 24 }}>
         <FormField label="Notes (optionnel)" placeholder="Tout ce qui vous semble important." textarea name="note" />
@@ -272,13 +321,27 @@ function ContribFormCard({ isLoggedIn }: { isLoggedIn: boolean }) {
   );
 }
 
+/** Champ piège, invisible et hors parcours clavier : seuls les robots le remplissent. */
+function PotDeMiel() {
+  return (
+    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+      <label>
+        Ne pas remplir
+        <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+      </label>
+    </div>
+  );
+}
+
 function ContribFormItem() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const supabase = createClient();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('loading');
+    setErrorMsg(null);
     const fd = new FormData(e.currentTarget);
     const { error } = await supabase.from('contributions').insert({
       type: 'item',
@@ -286,7 +349,8 @@ function ContribFormItem() {
       contributor_email: fd.get('email') as string,
       data: Object.fromEntries(fd.entries()),
     });
-    setStatus(error ? 'error' : 'done');
+    if (error) { setStatus('error'); setErrorMsg(messageErreur(error.message)); return; }
+    setStatus('done');
   }
 
   if (status === 'done') {
@@ -319,9 +383,10 @@ function ContribFormItem() {
       <div style={{ marginTop: 24 }}>
         <FormField label="Description de l'item" placeholder="Set, langue, état…" textarea name="description" />
       </div>
+      <PotDeMiel />
       {status === 'error' && (
-        <div style={{ marginTop: 16, color: '#a8485a', fontSize: 13 }}>
-          Une erreur est survenue. Réessayez ou contactez-nous.
+        <div style={{ marginTop: 16, padding: '12px 16px', border: '1px solid #a8485a', color: '#a8485a', fontSize: 13 }}>
+          {errorMsg ?? 'Une erreur est survenue. Réessayez ou contactez-nous.'}
         </div>
       )}
       <div style={{ marginTop: 32, display: 'flex', justifyContent: 'flex-end' }}>
@@ -335,17 +400,20 @@ function ContribFormItem() {
 
 function ContribFormCorrection() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const supabase = createClient();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('loading');
+    setErrorMsg(null);
     const fd = new FormData(e.currentTarget);
     const { error } = await supabase.from('contributions').insert({
       type: 'correction',
       data: Object.fromEntries(fd.entries()),
     });
-    setStatus(error ? 'error' : 'done');
+    if (error) { setStatus('error'); setErrorMsg(messageErreur(error.message)); return; }
+    setStatus('done');
   }
 
   if (status === 'done') {
@@ -376,9 +444,10 @@ function ContribFormCorrection() {
       <div style={{ marginTop: 24 }}>
         <FormField label="Source / preuve" placeholder="Lien, scan, référence éditoriale…" name="source" />
       </div>
+      <PotDeMiel />
       {status === 'error' && (
-        <div style={{ marginTop: 16, color: '#a8485a', fontSize: 13 }}>
-          Une erreur est survenue. Réessayez ou contactez-nous.
+        <div style={{ marginTop: 16, padding: '12px 16px', border: '1px solid #a8485a', color: '#a8485a', fontSize: 13 }}>
+          {errorMsg ?? 'Une erreur est survenue. Réessayez ou contactez-nous.'}
         </div>
       )}
       <div style={{ marginTop: 32, display: 'flex', justifyContent: 'flex-end' }}>

@@ -1,0 +1,23 @@
+-- ============================================================
+-- 005 — Durcissement de la porte d'entrée publique
+-- ============================================================
+-- Appliqué en production. Conservé ici pour l'historique et pour pouvoir
+-- rejouer le schéma depuis zéro.
+--
+-- Trois failles fermées :
+--  1. card_photos_night_seed : policy FOR ALL TO public sur le bucket
+--     card-photos — n'importe quel visiteur anonyme pouvait lire, écraser
+--     et SUPPRIMER tous les fichiers. Reste d'un script de seed.
+--  2. Buckets sans limite de taille ni de type MIME. Sur un bucket public,
+--     un SVG ou un HTML devient un vecteur XSS servi depuis notre domaine.
+--  3. contributions_insert WITH CHECK (true) sans validation ni quota :
+--     n'importe qui pouvait inonder la file de modération.
+--
+-- Piège rencontré : PostgreSQL accorde EXECUTE à PUBLIC par défaut sur toute
+-- fonction. Révoquer depuis anon/authenticated seulement ne fait rien, il
+-- faut révoquer depuis PUBLIC.
+--
+-- Le contenu exact est celui des migrations distantes :
+--   durcir_contributions_publiques
+--   revoquer_public_sur_fonctions_internes
+-- Voir supabase/tests/40_contributions.sql pour les tests associés.
