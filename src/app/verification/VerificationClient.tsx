@@ -144,10 +144,12 @@ export default function VerificationClient({
   candidats,
   stats,
   kind,
+  nbMasquees,
 }: {
   candidats: ResearchCandidate[];
   stats: ResearchStats;
   kind: 'tcg' | 'non_tcg';
+  nbMasquees: number;
 }) {
   const router = useRouter();
   const supabase = createClient();
@@ -228,6 +230,11 @@ export default function VerificationClient({
           </Link>
           <Link href="/verification?kind=non_tcg" style={{ ...chip(kind === 'non_tcg'), textDecoration: 'none' }}>
             Stickers / Topps / pins <span style={{ opacity: 0.6 }}>{stats.non_tcg_a_trier}</span>
+          </Link>
+          <Link href="/verification?kind=catalogue"
+            title="Fiches du catalogue masquées faute de visuel"
+            style={{ ...chip(false, p.brass), textDecoration: 'none' }}>
+            Catalogue <span style={{ opacity: 0.6 }}>{nbMasquees}</span>
           </Link>
         </div>
       </div>

@@ -4,7 +4,8 @@ import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { p } from '@/lib/palette';
 import VerificationClient from './VerificationClient';
-import { isCurator, type ResearchCandidate, type ResearchStats } from '@/types';
+import CatalogueACorriger from './CatalogueACorriger';
+import { isCurator, type CarteMasquee, type ResearchCandidate, type ResearchStats } from '@/types';
 
 export const metadata: Metadata = {
   title: 'Vérification — La Maison de Carapuce',
@@ -22,9 +23,13 @@ const EMPTY: ResearchStats = {
   image_bloquee: 0, gardes: 0, rejetes: 0, types: [],
 };
 
+type Onglet = 'tcg' | 'non_tcg' | 'catalogue';
+
 export default async function VerificationPage({ searchParams }: Props) {
   const sp = await searchParams;
-  const kind = (Array.isArray(sp.kind) ? sp.kind[0] : sp.kind) === 'non_tcg' ? 'non_tcg' : 'tcg';
+  const brut = Array.isArray(sp.kind) ? sp.kind[0] : sp.kind;
+  const onglet: Onglet =
+    brut === 'non_tcg' ? 'non_tcg' : brut === 'catalogue' ? 'catalogue' : 'tcg';
 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -46,20 +51,35 @@ export default async function VerificationPage({ searchParams }: Props) {
     );
   }
 
-  const [{ data: rows }, { data: stats }] = await Promise.all([
-    supabase.from('research_candidates').select('*')
-      .eq('kind', kind)
-      .order('preuve', { ascending: true })
-      .order('langue', { ascending: true })
-      .order('annee', { ascending: true }),
+  const [{ data: stats }, { data: masquees }] = await Promise.all([
     supabase.rpc('get_research_stats'),
+    supabase.rpc('get_cartes_masquees'),
   ]);
+
+  const nbMasquees = (masquees as CarteMasquee[] | null)?.length ?? 0;
+
+  if (onglet === 'catalogue') {
+    return (
+      <CatalogueACorriger
+        cartes={(masquees ?? []) as CarteMasquee[]}
+        stats={(stats as ResearchStats) ?? EMPTY}
+      />
+    );
+  }
+
+  const { data: rows } = await supabase
+    .from('research_candidates').select('*')
+    .eq('kind', onglet)
+    .order('preuve', { ascending: true })
+    .order('langue', { ascending: true })
+    .order('annee', { ascending: true });
 
   return (
     <VerificationClient
       candidats={(rows ?? []) as ResearchCandidate[]}
       stats={(stats as ResearchStats) ?? EMPTY}
-      kind={kind}
+      kind={onglet}
+      nbMasquees={nbMasquees}
     />
   );
 }

@@ -29,6 +29,9 @@ export function filterCards(cards: Card[], p: SearchParamsShape): Card[] {
   const tokens = normalize(p.q).split(' ').filter(Boolean);
 
   return cards.filter(c => {
+    // Une fiche masquée l'est aussi en mode dégradé, sinon elle réapparaîtrait
+    // dans le catalogue public dès que la RPC Postgres échoue.
+    if (c.masquee) return false;
     if (tokens.length) {
       const h = haystack(c);
       if (!tokens.every(t => h.includes(t))) return false;
@@ -57,7 +60,8 @@ export function sortCards(cards: Card[], sort: SearchParamsShape['sort']): Card[
   });
 }
 
-export function computeFacets(cards: Card[]): CatalogueFacets {
+export function computeFacets(all: Card[]): CatalogueFacets {
+  const cards = all.filter(c => !c.masquee);
   const tally = (key: (c: Card) => string) => {
     const m = new Map<string, number>();
     for (const c of cards) {

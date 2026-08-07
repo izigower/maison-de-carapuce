@@ -23,7 +23,24 @@ export interface Card {
   pipeline_status: 'draft' | 'sourced' | 'image_ok' | 'verified' | 'live' | 'rejected';
   source: string | null;
   source_url: string | null;
+  /** Retirée du catalogue public tant qu'elle n'a pas de visuel. */
+  masquee?: boolean;
   created_at: string;
+}
+
+/** Fiche du catalogue retirée du public faute d'image. */
+export interface CarteMasquee {
+  id: string;
+  set_name: string;
+  year: number | null;
+  lang: string;
+  card_number: string;
+  variant: string;
+  note: string | null;
+  source: string | null;
+  source_url: string | null;
+  image_statut: string;
+  masquee_motif: string | null;
 }
 
 /** Ligne renvoyée par la RPC search_cards : une Card + le total du jeu de résultats. */
