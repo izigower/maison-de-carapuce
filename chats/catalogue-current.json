@@ -1,0 +1,6832 @@
+[
+  {
+    "id": "base-JP-1996-",
+    "set_name": "Expansion Pack",
+    "year": 1996,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "007",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "JP Base Set",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/29e150ef8b08171ccc3c1fa7a73c2f92e018622dafac859eac642b211599be95/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "exp-sheet1-JP-1996-",
+    "set_name": "Expansion Sheet 1",
+    "year": 1996,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "",
+    "rarity": "Uncommon",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/542d2c2924095dca21c4cd5860cfd2f0c03da8656dd5095fd0976fe5a8f44ddc/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "base-promo-JP-1996-",
+    "set_name": "Unnumbered Promos JP",
+    "year": 1996,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "red-deck-JP-1997-",
+    "set_name": "Red Deck",
+    "year": 1997,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "squirtle-deck-JP-1997-40",
+    "set_name": "Squirtle Deck",
+    "year": 1997,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "40",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/IPS/40.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "squirtle-deck-JP-1997-16",
+    "set_name": "Squirtle Deck",
+    "year": 1997,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "16",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/IPS/16.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "squirtle-deck-JP-1997-18",
+    "set_name": "Squirtle Deck",
+    "year": 1997,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "18",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/IPS/18.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "squirtle-deck-JP-1997-37",
+    "set_name": "Squirtle Deck",
+    "year": 1997,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "37",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/IPS/37.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "base-EN-1999-63",
+    "set_name": "Base Set",
+    "year": 1999,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/102",
+    "rarity": "Common",
+    "variant": "Unlimited",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/base/base1/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=74410 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "base-uk-EN-1999-63",
+    "set_name": "Base Set (1999-2000)",
+    "year": 1999,
+    "lang": "EN",
+    "country": "GB",
+    "card_number": "63/102",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "UK printing",
+    "image_url": "https://assets.tcgdex.net/en/base/base1/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=74410 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "base-shadowless-1st-EN-1999-63",
+    "set_name": "Base Set (Shadowless)",
+    "year": 1999,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/102",
+    "rarity": "Common",
+    "variant": "1st Edition",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/base/base1/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=74410 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "base-shadowless-unl-EN-1999-63",
+    "set_name": "Base Set (Shadowless)",
+    "year": 1999,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/102",
+    "rarity": "Common",
+    "variant": "Unlimited",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/base/base1/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=74410 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "base1-DE-1999-63",
+    "set_name": "Grundset",
+    "year": 1999,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "63/102",
+    "rarity": "Common",
+    "variant": "1st Edition",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.163643+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/base1-63",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "base2-EN-2000-93",
+    "set_name": "Base Set 2",
+    "year": 2000,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "93/130",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/base/base4/93/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=66740 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "gym-challenge-1st-EN-2000-118",
+    "set_name": "Gym Challenge",
+    "year": 2000,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "118/132",
+    "rarity": "Uncommon",
+    "variant": "1st Edition",
+    "note": "Misty's Tears - Squirtle cameo",
+    "image_url": "https://assets.tcgdex.net/en/gym/gym2/118/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=44002 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "gym-challenge-unl-EN-2000-118",
+    "set_name": "Gym Challenge",
+    "year": 2000,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "118/132",
+    "rarity": "Uncommon",
+    "variant": "Unlimited",
+    "note": "Misty's Tears - Squirtle cameo",
+    "image_url": "https://assets.tcgdex.net/en/gym/gym2/118/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=44002 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "rocket-gang-JP-2000-",
+    "set_name": "Rocket Gang",
+    "year": 2000,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "007",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "JP Team Rocket",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/ca474f6eb65ffaed5055a8868aa8581fb8543b55cfba2395a7dcb6d3bc9564a7/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "team-rocket-1st-EN-2000-68",
+    "set_name": "Team Rocket",
+    "year": 2000,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "68/82",
+    "rarity": "Common",
+    "variant": "1st Edition",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/base/base5/68/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=68216 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "base5-DE-2000-68",
+    "set_name": "Team Rocket",
+    "year": 2000,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "68/82",
+    "rarity": "Common",
+    "variant": "1st Edition",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.277413+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/base5-68",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "team-rocket-unl-EN-2000-68",
+    "set_name": "Team Rocket",
+    "year": 2000,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "68/82",
+    "rarity": "Common",
+    "variant": "Unlimited",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/base/base5/68/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=68216 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "ecard1-rh-DE-2002-132",
+    "set_name": "Expedition",
+    "year": 2002,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "132/165",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.449092+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ecard1-132",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "ecard1-rh-DE-2002-131",
+    "set_name": "Expedition",
+    "year": 2002,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "131/165",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.447675+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ecard1-131",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "ecard1-DE-2002-132",
+    "set_name": "Expedition",
+    "year": 2002,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "132/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.40267+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ecard1-132",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "ecard1-DE-2002-131",
+    "set_name": "Expedition",
+    "year": 2002,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "131/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.398525+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ecard1-131",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "expedition-rh-EN-2002-131",
+    "set_name": "Expedition Base Set",
+    "year": 2002,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "131/165",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ecard/ecard1/131/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=56198 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "expedition-rh-EN-2002-132",
+    "set_name": "Expedition Base Set",
+    "year": 2002,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "132/165",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ecard/ecard1/132/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=67730 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "expedition-EN-2002-132",
+    "set_name": "Expedition Base Set",
+    "year": 2002,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "132/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ecard/ecard1/132/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=67730 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "expedition-EN-2002-131",
+    "set_name": "Expedition Base Set",
+    "year": 2002,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "131/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ecard/ecard1/131/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=56198 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "leg-col-EN-2002-95",
+    "set_name": "Legendary Collection",
+    "year": 2002,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "95/110",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/lc/lc/95/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=63164 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "leg-col-rh-EN-2002-95",
+    "set_name": "Legendary Collection",
+    "year": 2002,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "95/110",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/lc/lc/95/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=63164 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "mcd-pkmne-JP-2002-7",
+    "set_name": "McDonald's Pokemon-e Minimum Pack",
+    "year": 2002,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "7/18",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/MCMP/7.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "pkmne-starter-JP-2002-17",
+    "set_name": "Pokemon-e Starter Deck",
+    "year": 2002,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "17/29",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/PESD/17.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "pkmne-starter-JP-2002-18",
+    "set_name": "Pokemon-e Starter Deck",
+    "year": 2002,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "18/29",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/PESD/18.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "aquapolis-rh-EN-2003-136",
+    "set_name": "Aquapolis",
+    "year": 2003,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "136/147",
+    "rarity": "Uncommon",
+    "variant": "Reverse Holo",
+    "note": "Town Volunteers - Squirtle cameo",
+    "image_url": "https://assets.tcgdex.net/en/ecard/ecard2/136/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=61314 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "aquapolis-EN-2003-136",
+    "set_name": "Aquapolis",
+    "year": 2003,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "136/147",
+    "rarity": "Uncommon",
+    "variant": "Normal",
+    "note": "Town Volunteers - Squirtle cameo",
+    "image_url": "https://assets.tcgdex.net/en/ecard/ecard2/136/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=61314 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "advp-55-JP-2004-55",
+    "set_name": "ADV-P Promotional cards",
+    "year": 2004,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "55/ADV-P",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/ADVP/55.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "blastoise-starter-JP-2004-18",
+    "set_name": "Blastoise Starter Deck",
+    "year": 2004,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "18/52",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://tcgrepublic.com/media/binary/000/223/423/223423.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "blastoise-starter-JP-2004-17",
+    "set_name": "Blastoise Starter Deck",
+    "year": 2004,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "17/52",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://tcgrepublic.com/media/binary/000/233/950/233950.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "ex6-DE-2004-83",
+    "set_name": "EX Feuerrot & Blattgrün",
+    "year": 2004,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "83/112",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.309402+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ex6-83",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "ex6-DE-2004-82",
+    "set_name": "EX Feuerrot & Blattgrün",
+    "year": 2004,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "82/112",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.31529+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ex6-82",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "frlg-rh-EN-2004-83",
+    "set_name": "EX FireRed & LeafGreen",
+    "year": 2004,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "83/112",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex6/83/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=45002 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "frlg-rh-EN-2004-82",
+    "set_name": "EX FireRed & LeafGreen",
+    "year": 2004,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "82/112",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex6/82/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=36162 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "frlg-EN-2004-82",
+    "set_name": "EX FireRed & LeafGreen",
+    "year": 2004,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "82/112",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex6/82/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=36162 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "frlg-EN-2004-83",
+    "set_name": "EX FireRed & LeafGreen",
+    "year": 2004,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "83/112",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex6/83/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=45002 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "ex4-DE-2004-46",
+    "set_name": "EX Team Magma vs Team Aqua",
+    "year": 2004,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "46/95",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.089292+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ex4-46",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "tmta-EN-2004-46",
+    "set_name": "EX Team Magma vs Team Aqua",
+    "year": 2004,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "46/95",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex4/46/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47992 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "tmta-rh-EN-2004-46",
+    "set_name": "EX Team Magma vs Team Aqua",
+    "year": 2004,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "46/95",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex4/46/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47992 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "ex4-rh-DE-2004-46",
+    "set_name": "EX Team Magma vs Team Aqua",
+    "year": 2004,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "46/95",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.153794+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ex4-46",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "delta-ditto-EN-2005-40",
+    "set_name": "EX Delta Species",
+    "year": 2005,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "40/113",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "Ditto shapeshifted as Squirtle",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex13/40/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=74562 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "delta-ditto-EN-2005-64",
+    "set_name": "EX Delta Species",
+    "year": 2005,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "64/113",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "Ditto shapeshifted as Squirtle",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex13/64/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47444 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "delta-ditto-rh-EN-2005-64",
+    "set_name": "EX Delta Species",
+    "year": 2005,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "64/113",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "Ditto shapeshifted as Squirtle",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex13/64/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47444 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "delta-ditto-rh-EN-2005-40",
+    "set_name": "EX Delta Species",
+    "year": 2005,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "40/113",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "Ditto shapeshifted as Squirtle",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex13/40/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=74562 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "cg-rh-EN-2006-64",
+    "set_name": "EX Crystal Guardians",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "64/100",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex14/64/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=90154 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "cg-rh-EN-2006-63",
+    "set_name": "EX Crystal Guardians",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/100",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex14/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=65350 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "ex14-DE-2006-63",
+    "set_name": "EX Crystal Guardians",
+    "year": 2006,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "63/100",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.214282+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ex14-63",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "ex14-DE-2006-64",
+    "set_name": "EX Crystal Guardians",
+    "year": 2006,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "64/100",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.230846+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/ex14-64",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "cg-EN-2006-64",
+    "set_name": "EX Crystal Guardians",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "64/100",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex14/64/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=90154 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "cg-EN-2006-63",
+    "set_name": "EX Crystal Guardians",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/100",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex14/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=65350 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "cg-league-EN-2006-63",
+    "set_name": "League & Championship Cards",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/100",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "City Championships promo",
+    "image_url": "https://tcgplayer-cdn.tcgplayer.com/product/209567_in_1000x1000.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "miracle-crystal-JP-2006-18",
+    "set_name": "Miracle Crystal",
+    "year": 2006,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "18/75",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/7smzd4i3cr6v5lwz/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "ocean-kyogre-JP-2006-3",
+    "set_name": "Ocean's Kyogre ex Starter Deck",
+    "year": 2006,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "3/16",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/OKCS/3.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "pcgp-121-JP-2006-121",
+    "set_name": "PCG-P Promotional cards",
+    "year": 2006,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "121/PCG-P",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/PCGP/121.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "pop4-EN-2006-14",
+    "set_name": "POP Series 4",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "14/17",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/pop/pop4/14/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=60064 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "wcd-2006-EN-83",
+    "set_name": "World Championship Decks",
+    "year": 2006,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "83/112",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "Hiroki Yano 2006 deck",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/shqj7lc3y6qi2bid/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "misc-ditto-expo-EN-2007-64",
+    "set_name": "Miscellaneous Promos",
+    "year": 2007,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "64/113",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "Ditto (Squirtle) - Games Expo 2007",
+    "image_url": "https://assets.tcgdex.net/en/ex/ex13/64/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47444 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "dp3-rh-DE-2007-112",
+    "set_name": "Rätselhafte Wunder",
+    "year": 2007,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "112/132",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.39059+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/dp3-112",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "dp3-DE-2007-112",
+    "set_name": "Rätselhafte Wunder",
+    "year": 2007,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "112/132",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.33195+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/dp3-112",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sw-EN-2007-112",
+    "set_name": "Secret Wonders",
+    "year": 2007,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "112/132",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/dp/dp3/112/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=70356 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sw-rh-EN-2007-112",
+    "set_name": "Secret Wonders",
+    "year": 2007,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "112/132",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/dp/dp3/112/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=70356 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "shining-darkness-JP-2007-",
+    "set_name": "Shining Darkness",
+    "year": 2007,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/c3e25dc64e3b9549cd69ff1788da4e4f4f0be5d314eaed8e0e1e6748ce46bc25/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "dptp-9-JP-2009-9",
+    "set_name": "DPt-P Promotional cards",
+    "year": 2009,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "9/DPt-P",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/4y763bcjp7hvef5f/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "galactic-conquest-JP-2009-23",
+    "set_name": "Galactic's Conquest",
+    "year": 2009,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "23/96",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/PT1/23.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "pl1-DE-2009-96",
+    "set_name": "Platin",
+    "year": 2009,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "96/127",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.324083+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/pl1-96",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "pl1-rh-DE-2009-96",
+    "set_name": "Platin",
+    "year": 2009,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "96/127",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.365112+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/pl1-96",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "platinum-rh-EN-2009-96",
+    "set_name": "Platinum",
+    "year": 2009,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "96/127",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/pl/pl1/96/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=55388 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "platinum-EN-2009-96",
+    "set_name": "Platinum",
+    "year": 2009,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "96/127",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/pl/pl1/96/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=55388 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "blastoise-battle-JP-2010-1",
+    "set_name": "Blastoise Battle Starter Deck",
+    "year": 2010,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "1/10",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/BSDB/1.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "hgss2-rh-DE-2010-63",
+    "set_name": "Entfesselt",
+    "year": 2010,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "63/95",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/hgss/hgss2/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.215494+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/hgss2-63",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "hgss2-DE-2010-63",
+    "set_name": "Entfesselt",
+    "year": 2010,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "63/95",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/hgss/hgss2/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.142598+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/hgss2-63",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "unleashed-EN-2010-63",
+    "set_name": "HS-Unleashed",
+    "year": 2010,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/95",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/hgss/hgss2/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=98958 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "unleashed-rh-EN-2010-63",
+    "set_name": "HS-Unleashed",
+    "year": 2010,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "63/95",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/hgss/hgss2/63/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=98958 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "bw-bc-EN-2012-29",
+    "set_name": "Boundaries Crossed",
+    "year": 2012,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "29/149",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw7/29/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=64130 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "bw-bc-rh-EN-2012-29",
+    "set_name": "Boundaries Crossed",
+    "year": 2012,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "29/149",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw7/29/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=64130 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "cold-flare-JP-2012-12",
+    "set_name": "Cold Flare",
+    "year": 2012,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "12/59",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/eyux6q2ob6gj6uow/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "bw7-DE-2012-29",
+    "set_name": "Überschrittene Schwellen",
+    "year": 2012,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "29/149",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/bw/bw7/29/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.000361+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/bw7-29",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "bkb-battle-JP-2013-1",
+    "set_name": "Black Kyurem-EX Battle Strength Deck",
+    "year": 2013,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "1/18",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://ik.imagekit.io/cardnexus/production/pokemon-japan/bkb-black-kyurem-ex-battle-strength-deck-001018-normal.jpg/tr:w-640,q-80",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "blastoise-kyurem-JP-2013-1",
+    "set_name": "Blastoise + Kyurem-EX Combo Deck",
+    "year": 2013,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "1/18",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/y7t4lumlsqlzwu5o/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "misc-bab-EN-2013-14",
+    "set_name": "Miscellaneous Promos",
+    "year": 2013,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "14/101",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "Build-A-Bear Workshop Exclusive",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw10/14/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=60114 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "plasma-blast-rh-EN-2013-14",
+    "set_name": "Plasma Blast",
+    "year": 2013,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "14/101",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw10/14/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=60114 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "plasma-blast-EN-2013-14",
+    "set_name": "Plasma Blast",
+    "year": 2013,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "14/101",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw10/14/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=60114 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "plasma-storm-rh-EN-2013-24",
+    "set_name": "Plasma Storm",
+    "year": 2013,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "24/135",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw8/24/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47278 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "plasma-storm-EN-2013-24",
+    "set_name": "Plasma Storm",
+    "year": 2013,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "24/135",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/bw/bw8/24/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=47278 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "bw10-DE-2013-14",
+    "set_name": "Plasma-Blaster",
+    "year": 2013,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "14/101",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/bw/bw10/14/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.771883+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/bw10-14",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "bw8-DE-2013-24",
+    "set_name": "Plasma-Sturm",
+    "year": 2013,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "24/135",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/bw/bw8/24/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.00267+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/bw8-24",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "xy-champ-2016-finalist-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Finalist",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-champion-EN', 'xy-champ-2016-qf-EN', 'xy-champ-2016-t16-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-staff-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Staff",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-champion-EN', 'xy-champ-2016-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-t32-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Top Thirty-Two",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-champion-EN', 'xy-champ-2016-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-sf-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Semi-Finalist",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-champion-EN', 'xy-champ-2016-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-champion-EN', 'xy-champ-2016-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-champion-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Champion",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-qf-EN', 'xy-champ-2016-t16-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-qf-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Quarter Finalist",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-champion-EN', 'xy-champ-2016-t16-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "xy-champ-2016-t16-EN",
+    "set_name": "XY Promos",
+    "year": 2016,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "XY176",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival 2016 - Top Sixteen",
+    "image_url": "https://assets.tcgdex.net/en/xy/xyp/XY176/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['xy-champ-2016-finalist-EN', 'xy-champ-2016-champion-EN', 'xy-champ-2016-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=108522 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm-ub-promo-EN-2019-33",
+    "set_name": "Blister Exclusives",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "33/214",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "Premium Collection Promo",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm10/33/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 4 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=127216 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "full-metal-wall-JP-2019-8",
+    "set_name": "Full Metal Wall",
+    "year": 2019,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "8/54",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm10/33/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 4 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=127216 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm10-DE-2019-33",
+    "set_name": "Kräfte im Einklang",
+    "year": 2019,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "33/214",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sm/sm10/33/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.996318+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/sm10-33",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "swshp-DE-2019-SWSH233",
+    "set_name": "SCSC Promokarten",
+    "year": 2019,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "SWSH233",
+    "rarity": "Keine",
+    "variant": "Normal",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.618854+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/swshp-SWSH233",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sm-champ-2019-staff-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Staff",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-champion-EN', 'sm-champ-2019-finalist-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-sf-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Semi-Finalist",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-champion-EN', 'sm-champ-2019-finalist-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-qf-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Quarter Finalist",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-champion-EN', 'sm-champ-2019-finalist-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-champion-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Champion",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-finalist-EN', 'sm-champ-2019-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-finalist-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Finalist",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-champion-EN', 'sm-champ-2019-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-t16-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Top Sixteen",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-champion-EN', 'sm-champ-2019-finalist-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-t32-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019 - Top Thirty-Two",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-EN', 'sm-champ-2019-champion-EN', 'sm-champ-2019-finalist-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-champ-2019-EN",
+    "set_name": "SM Promos",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SM231",
+    "rarity": "Rare",
+    "variant": "Normal",
+    "note": "Champions Festival Worlds 2019",
+    "image_url": "https://images.pokemontcg.io/smp/SM231_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": false,
+        "reason": "image partagée par 7 autres cartes: ['sm-champ-2019-champion-EN', 'sm-champ-2019-finalist-EN', 'sm-champ-2019-qf-EN']…",
+        "needs_human": true
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=388090 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "sm-teamup-EN-2019-22",
+    "set_name": "SM-Team Up",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "22/181",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm9/22/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=109834 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm-teamup-rh-EN-2019-23",
+    "set_name": "SM-Team Up",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "23/181",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm9/23/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=104824 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm-teamup-rh-EN-2019-22",
+    "set_name": "SM-Team Up",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "22/181",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm9/22/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=109834 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm-teamup-EN-2019-23",
+    "set_name": "SM-Team Up",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "23/181",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm9/23/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=104824 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm-ub-rh-EN-2019-33",
+    "set_name": "SM-Unbroken Bonds",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "33/214",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm10/33/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 4 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=127216 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm-ub-EN-2019-33",
+    "set_name": "SM-Unbroken Bonds",
+    "year": 2019,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "33/214",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm10/33/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 4 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=127216 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "tag-all-stars-JP-2019-29",
+    "set_name": "Tag All Stars",
+    "year": 2019,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "29/173",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm10/33/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 4 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=127216 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "tag-bolt-JP-2019-21",
+    "set_name": "Tag Bolt",
+    "year": 2019,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "21/95",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm9/23/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=104824 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "tag-bolt-JP-2019-20",
+    "set_name": "Tag Bolt",
+    "year": 2019,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "20/95",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sm/sm9/22/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=109834 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sm9-DE-2019-22",
+    "set_name": "Teams Sind Trumpf",
+    "year": 2019,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "22/181",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sm/sm9/22/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.771703+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/sm9-22",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sm9-DE-2019-23",
+    "set_name": "Teams Sind Trumpf",
+    "year": 2019,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "23/181",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sm/sm9/23/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.774724+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/sm9-23",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "mcd-25th-holo-EN-2021-17",
+    "set_name": "McDonald's 25th Anniversary",
+    "year": 2021,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "17/25",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://images.pokemontcg.io/mcd21/17_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=1490392 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "mcd-25th-EN-2021-17",
+    "set_name": "McDonald's 25th Anniversary",
+    "year": 2021,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "17/25",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://images.pokemontcg.io/mcd21/17_hires.png",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=1490392 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient 'pokemontcg.io' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/png"
+      }
+    }
+  },
+  {
+    "id": "mfb-blue-EN-2022-",
+    "set_name": "My First Battle",
+    "year": 2022,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "",
+    "rarity": "Common",
+    "variant": "Blue Border",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/iabc6r7aqiodfiwy/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "mfb-EN-2022-",
+    "set_name": "My First Battle",
+    "year": 2022,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/mi5mephopolstwke/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "pogo-JP-2022-15",
+    "set_name": "Pokemon GO",
+    "year": 2022,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "15/78",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/swsh/swsh10.5/015/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=75092 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "pogo-rh-EN-2022-15",
+    "set_name": "Pokemon GO",
+    "year": 2022,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "15/78",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/swsh/swsh10.5/015/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=75092 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "pogo-EN-2022-15",
+    "set_name": "Pokemon GO",
+    "year": 2022,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "15/78",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/swsh/swsh10.5/015/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 2 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=75092 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "swsh10.5-rh-DE-2022-015",
+    "set_name": "Pokémon GO",
+    "year": 2022,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "15/78",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/swsh/swsh10.5/015/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.933181+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/swsh10.5-015",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "swsh10.5-DE-2022-015",
+    "set_name": "Pokémon GO",
+    "year": 2022,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "15/78",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/swsh/swsh10.5/015/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.77458+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/swsh10.5-015",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sp-290-JP-2022-290",
+    "set_name": "S-P Promotional cards",
+    "year": 2022,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "290/S-P",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/44b24a85f676d0847e88772ac58ab971606bca16a699234d24da7dac03b8afe1/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "swsh-promo-EN-2022-233",
+    "set_name": "SWSH Black Star Promos",
+    "year": 2022,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "SWSH233",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/swsh/swshp/SWSH233/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=76414 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sv03.5-DE-2023-007",
+    "set_name": "151",
+    "year": 2023,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "7/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sv/sv03.5/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.772519+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/sv03.5-007",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sv03.5-DE-2023-170",
+    "set_name": "151",
+    "year": 2023,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "170/165",
+    "rarity": "Selten, Illustration",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sv/sv03.5/170/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.427197+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/sv03.5-170",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "bs-suicune-deck-JP-2023-1",
+    "set_name": "Blastoise & Suicune ex Deck",
+    "year": 2023,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "1/32",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "JP equivalent of Trading Card Game Classic",
+    "image_url": "https://assets.tcgdex.net/en/sv/svp/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=78652 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "cz-galarian-EN-2023-GG53",
+    "set_name": "Crown Zenith: Galarian Gallery",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "GG53/GG70",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "Hoopa V - Squirtle cameo",
+    "image_url": "https://assets.tcgdex.net/en/swsh/swsh12.5/GG53/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=71620 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "pkmn151-JP-2023-7",
+    "set_name": "Pokemon Card 151",
+    "year": 2023,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "7/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv03.5/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=56750 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "pkmn151-ar-JP-2023-170",
+    "set_name": "Pokemon Card 151",
+    "year": 2023,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "170/165",
+    "rarity": "Art Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv03.5/170/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "image_ok",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=87852 bytes"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "image EN utilisée pour carte JP — vérification humaine requise",
+        "needs_human": true
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sv151-EN-2023-7",
+    "set_name": "SV-151",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "7/165",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv03.5/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=56750 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sv151-cosmos-EN-2023-7",
+    "set_name": "SV-151",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "7/165",
+    "rarity": "Holo Rare",
+    "variant": "Cosmos Holo",
+    "note": "Costco Exclusive",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv03.5/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=56750 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sv151-rh-EN-2023-7",
+    "set_name": "SV-151",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "7/165",
+    "rarity": "Common",
+    "variant": "Reverse Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv03.5/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 3 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=56750 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "sv151-ar-EN-2023-170",
+    "set_name": "SV-151",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "170/165",
+    "rarity": "Art Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv03.5/170/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=87852 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "svp-61-JP-2023-61",
+    "set_name": "SV-P Promotional cards",
+    "year": 2023,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "61/SV-P",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://storage.googleapis.com/images.pricecharting.com/4xijx75bm3h3b4tm/1600.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "svp-pkmncenter-EN-2023-7",
+    "set_name": "SVP Black Star Promos",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "7/165",
+    "rarity": "Holo Rare",
+    "variant": "Reverse Holo",
+    "note": "Pokemon Center Exclusive",
+    "image_url": "https://assets.tcgdex.net/en/sv/svp/007/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image partagée avec 1 autres (variantes, acceptable)"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=78652 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "svp-DE-2023-048",
+    "set_name": "SVP Black Star Promos",
+    "year": 2023,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "48/225",
+    "rarity": "Keine",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sv/svp/048/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.113045+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/svp-048",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "svp-cosmos-EN-2023-48",
+    "set_name": "SVP Black Star Promos",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "48",
+    "rarity": "Holo Rare",
+    "variant": "Cosmos Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/svp/048/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=65256 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "tcg-classic-EN-2023-1",
+    "set_name": "Trading Card Game Classic",
+    "year": 2023,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "1/34",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://www.cardshunter.fr/wp-content/smush-webp/2023/11/1-3.jpg.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "vsc-special-JP-2023-14",
+    "set_name": "Venusaur & Charizard & Blastoise Special Deck Set ex",
+    "year": 2023,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "14/49",
+    "rarity": "Common",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_jp/SVG/14.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "vsc-special-JP-2023-52",
+    "set_name": "Venusaur & Charizard & Blastoise Special Deck Set ex",
+    "year": 2023,
+    "lang": "JP",
+    "country": "JP",
+    "card_number": "52/49",
+    "rarity": "Special Illustration Rare",
+    "variant": "Holo",
+    "note": "Stellar Crown JP equivalent",
+    "image_url": "https://tcgrepublic.com/media/binary/000/493/428/493428.jpg",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "30thp-3-JP-2024-3",
+    "set_name": "30th-P Promotional cards",
+    "year": 2024,
+    "lang": "ZH",
+    "country": "ZH",
+    "card_number": "3/30th-P",
+    "rarity": "Promo",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets_chn/30THP/3.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "pas d'image, skip"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "lang_match": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "pas d'image_url"
+      }
+    }
+  },
+  {
+    "id": "mep-promo-EN-2024-39",
+    "set_name": "MEP Black Star Promos",
+    "year": 2024,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "039",
+    "rarity": "Holo Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://pokecardex-scans.b-cdn.net/sets/MEP/US/39.jpg?class=hd",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": true,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": false,
+        "reason": "image trop petite: 299 bytes (min 30000)"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": false,
+        "reason": "HTTP 404"
+      }
+    }
+  },
+  {
+    "id": "P-A-DE-2024-033",
+    "set_name": "PROMO-A",
+    "year": 2024,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "033",
+    "rarity": "Keine",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/tcgp/P-A/033/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:51.976785+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/P-A-033",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sv07-DE-2024-148",
+    "set_name": "Stellarkrone",
+    "year": 2024,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "148/142",
+    "rarity": "Selten, Illustration",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/sv/sv07/148/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.412471+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/sv07-148",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "sv7-stellar-EN-2024-148",
+    "set_name": "SV07-Stellar Crown",
+    "year": 2024,
+    "lang": "EN",
+    "country": "US",
+    "card_number": "148/142",
+    "rarity": "Special Illustration Rare",
+    "variant": "Holo",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/en/sv/sv07/148/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-01T13:35:12.226628+00:00",
+    "created_by": null,
+    "verification_status": "verified",
+    "source": "masterlist",
+    "source_url": null,
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "verified",
+    "pipeline_checks": {
+      "source": {
+        "pass": true,
+        "reason": "source=masterlist"
+      },
+      "no_dupe": {
+        "pass": true,
+        "reason": "image unique"
+      },
+      "image_size": {
+        "pass": true,
+        "reason": "content-length=102842 bytes"
+      },
+      "lang_match": {
+        "pass": true,
+        "reason": "URL contient '/en/' pour lang=EN"
+      },
+      "image_exists": {
+        "pass": true,
+        "reason": "HTTP 200, content-type=image/webp"
+      }
+    }
+  },
+  {
+    "id": "A1-DE-2024-053",
+    "set_name": "Unschlagbare Gene",
+    "year": 2024,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "53/226",
+    "rarity": "Une Diamant",
+    "variant": "Normal",
+    "note": "",
+    "image_url": "https://assets.tcgdex.net/de/tcgp/A1/053/high.webp",
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.144615+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/A1-053",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "sourced",
+    "pipeline_checks": {}
+  },
+  {
+    "id": "mep-DE-2025-039",
+    "set_name": "MEP Black Star Promos",
+    "year": 2025,
+    "lang": "DE",
+    "country": "DE",
+    "card_number": "039",
+    "rarity": "Keine",
+    "variant": "Holo",
+    "note": "",
+    "image_url": null,
+    "is_owned": false,
+    "created_at": "2026-05-04T21:03:52.048627+00:00",
+    "created_by": null,
+    "verification_status": "pending",
+    "source": "tcgdex",
+    "source_url": "https://api.tcgdex.net/v2/de/cards/mep-039",
+    "ai_confidence": null,
+    "ai_verdict": null,
+    "back_image_url": null,
+    "image_needs_verification": false,
+    "image_verified_by": null,
+    "image_verified_at": null,
+    "pipeline_status": "draft",
+    "pipeline_checks": {}
+  }
+]
