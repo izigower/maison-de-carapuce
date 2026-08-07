@@ -1,0 +1,440 @@
+[
+  {
+    "fichier": "002_FR_151_007_Carapuce.webp",
+    "octets": 77480,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "003_FR_POP-Serie-4_14_Carapuce.webp",
+    "octets": 65928,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "004_FR_Explosion-Plasma_14_Carapuce.webp",
+    "octets": 71706,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "005_FR_Pokemon-GO_015_Carapuce.webp",
+    "octets": 91096,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "007_FR_Duo-de-Choc_22_Carapuce.webp",
+    "octets": 74704,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "008_FR_Duo-de-Choc_23_Carapuce.webp",
+    "octets": 69908,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "009_FR_Tempete-Plasma_24_Carapuce.webp",
+    "octets": 55824,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "010_FR_Frontieres-Franchies_29_Carapuce.webp",
+    "octets": 76878,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "011_FR_Alliance-Infaillible_33_Carapuce.webp",
+    "octets": 86364,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "012_FR_MEP-Black-Star-Promos_039_Carapuce.webp",
+    "octets": 55608,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "013_FR_EX-Team-Magma-vs-Team-Aqua_46_Carapuce.webp",
+    "octets": 78526,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "014_FR_SVP-Black-Star-Promos_048_Carapuce.webp",
+    "octets": 98178,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "015_FR_Set-de-Base_63_Carapuce.webp",
+    "octets": 68916,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "016_FR_Dechainement_63_Carapuce.webp",
+    "octets": 74900,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "017_FR_EX-Gardiens-de-Cristal_63_Carapuce.webp",
+    "octets": 55262,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "018_FR_EX-Gardiens-de-Cristal_64_Carapuce.webp",
+    "octets": 61392,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "019_FR_Team-Rocket_68_Carapuce.webp",
+    "octets": 69930,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "020_FR_EX-Rouge-Feu-Vert-Feuille_82_Carapuce.webp",
+    "octets": 48502,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "021_FR_EX-Rouge-Feu-Vert-Feuille_83_Carapuce.webp",
+    "octets": 56136,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "022_FR_Platine_96_Carapuce.webp",
+    "octets": 63022,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "023_FR_Merveilles-Secretes_112_Carapuce.webp",
+    "octets": 113730,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "024_FR_Expedition_131_Carapuce.webp",
+    "octets": 48140,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "025_FR_Expedition_132_Carapuce.webp",
+    "octets": 85878,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "026_FR_Couronne-Stellaire_148_Carapuce.webp",
+    "octets": 117256,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "027_FR_151_170_Carapuce.webp",
+    "octets": 121444,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "028_FR_Promo-SWSH_SWSH233_Carapuce.webp",
+    "octets": 104826,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "029_ES_151_007_Squirtle.webp",
+    "octets": 66312,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "030_ES_Pokemon-GO_015_Squirtle.webp",
+    "octets": 74000,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "031_ES_Union-de-Aliados_22_Squirtle.webp",
+    "octets": 65160,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "032_ES_Union-de-Aliados_23_Squirtle.webp",
+    "octets": 59118,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "033_ES_Tormenta-Plasma_24_Squirtle.webp",
+    "octets": 47594,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "034_ES_Fronteras-Cruzadas_29_Squirtle.webp",
+    "octets": 65946,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "035_ES_Vinculos-Indestructibles_33_Squirtle.webp",
+    "octets": 72034,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "037_ES_SVP-Black-Star-Promos_048_Squirtle.webp",
+    "octets": 66306,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "038_ES_Corona-Astral_148_Squirtle.webp",
+    "octets": 101066,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "039_ES_151_170_Squirtle.webp",
+    "octets": 102342,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "041_IT_151_007_Squirtle.webp",
+    "octets": 66896,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "042_IT_Pokemon-GO_015_Squirtle.webp",
+    "octets": 76158,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "043_IT_Gioco-di-Squadra_22_Squirtle.webp",
+    "octets": 64496,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "044_IT_Gioco-di-Squadra_23_Squirtle.webp",
+    "octets": 59442,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "045_IT_Uragano-Plasma_24_Squirtle.webp",
+    "octets": 47334,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "046_IT_Confini-Varcati_29_Squirtle.webp",
+    "octets": 65326,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "047_IT_Legami-Inossidabili_33_Squirtle.webp",
+    "octets": 72670,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "049_IT_SVP-Black-Star-Promos_048_Squirtle.webp",
+    "octets": 65886,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "051_IT_Corona-Astrale_148_Squirtle.webp",
+    "octets": 103916,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "052_IT_151_170_Squirtle.webp",
+    "octets": 102456,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "053_IT_SPSC-Promo_SWSH233_Squirtle.webp",
+    "octets": 76678,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "054_PT_151_007_Squirtle.webp",
+    "octets": 67302,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "055_PT_Explosao-de-Plasma_14_Squirtle.webp",
+    "octets": 61472,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "056_PT_Pokemon-GO_015_Squirtle.webp",
+    "octets": 73488,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "057_PT_Uniao-de-Aliados_22_Squirtle.webp",
+    "octets": 58070,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "058_PT_Uniao-de-Aliados_23_Squirtle.webp",
+    "octets": 53052,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "059_PT_Tempestade-de-Plasma_24_Squirtle.webp",
+    "octets": 47796,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "060_PT_Fronteiras-Cruzadas_29_Squirtle.webp",
+    "octets": 66210,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "061_PT_Elos-Inquebraveis_33_Squirtle.webp",
+    "octets": 71846,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "063_PT_SVP-Black-Star-Promos_048_Squirtle.webp",
+    "octets": 66876,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "064_PT_Coroa-Estelar_148_Squirtle.webp",
+    "octets": 104380,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "065_PT_151_170_Squirtle.webp",
+    "octets": 102780,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "067_ZH-TW_-151_007_.webp",
+    "octets": 76448,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "068_ZH-TW_Pokemon-GO_015_.webp",
+    "octets": 53906,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "070_ID_Kartu-Pokemon-151_007_Squirtle.webp",
+    "octets": 80870,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "072_TH_-151_007_.webp",
+    "octets": 74238,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "074_EN_Wizards-Black-Star-Promos_18_Team-Rocket-s-Meowth.webp",
+    "octets": 91656,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "075_EN_Undaunted_74-90_Flower-Shop-Lady.webp",
+    "octets": 89098,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "076_EN_Hidden-Fates_46-68_Chansey.webp",
+    "octets": 82404,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "077_EN_Hidden-Fates_61-68_Misty-s-Cerulean-City-Gym.webp",
+    "octets": 68212,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "078_JP_XY-P-Promotional-cards_279-XY-P_Pikachu.webp",
+    "octets": 50742,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "079_JP_XY-P-Promotional-cards_298-XY-P_M-Sachiko-EX.webp",
+    "octets": 63426,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "080_JP_Tag-All-Stars_196-173_Green-s-Exploration.webp",
+    "octets": 49058,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "081_ZH-CN_Battle-Party-Set-Reward-Pack-CSMPiC-_033-024_Exploration-de-Leaf-Green-s-Exploration.webp",
+    "octets": 25380,
+    "type": "webp",
+    "suspect": false
+  },
+  {
+    "fichier": "082_JP_CoroCoro-Comic-promo_Unnumbered_Pikachu-s-Summer-Vacation.jpg",
+    "octets": 63342,
+    "type": "jpeg",
+    "suspect": false
+  },
+  {
+    "fichier": "083_JP_Bessatsu-CoroCoro-Comic-promo_Unnumbered_Pokemon-Valley.jpg",
+    "octets": 65949,
+    "type": "jpeg",
+    "suspect": false
+  },
+  {
+    "fichier": "084_JP_Pokemon-Card-Fan-Club-promo_Unnumbered-2001_Tropical-Present.jpg",
+    "octets": 69280,
+    "type": "jpeg",
+    "suspect": false
+  }
+]

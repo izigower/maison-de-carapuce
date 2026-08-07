@@ -40,3 +40,10 @@ yarn-error.log*
 
 # Artefact de debug de l'import TCGdex (le .sql fait foi)
 supabase/seed_tcgdex.json
+
+# Sandbox des agents de recherche : node_modules commité par erreur (326 Mo)
+chats/spreadsheet-work/node_modules/
+outputs/**/node_modules/
+# Archives et artefacts de debug redondants avec les dossiers non compressés
+outputs/**/*.zip
+outputs/**/*.inspect.ndjson
