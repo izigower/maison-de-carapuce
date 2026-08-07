@@ -1,0 +1,314 @@
+'use client';
+
+import { useMemo, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { createClient } from '@/lib/supabase/client';
+import { p } from '@/lib/palette';
+import type { ResearchCandidate, ResearchStats } from '@/types';
+
+const PREUVE_COULEUR: Record<string, string> = {
+  forte: '#2a6a4a', moyenne: '#a07a3a', marchand: '#a85838',
+  faible: '#a8485a', aucune: '#a8485a',
+};
+
+const STATUT_LABEL: Record<string, string> = {
+  a_trier: 'À trier', garde: 'Gardée', rejete: 'Rejetée', importe: 'Importée',
+};
+
+const th: React.CSSProperties = {
+  textAlign: 'left', padding: '10px 12px', fontSize: 10, letterSpacing: 1.8,
+  textTransform: 'uppercase', color: p.inkSoft, fontWeight: 500,
+  borderBottom: `1px solid ${p.rule}`, whiteSpace: 'nowrap',
+};
+const td: React.CSSProperties = {
+  padding: '10px 12px', fontSize: 13, verticalAlign: 'middle',
+  borderBottom: `1px solid rgba(26,31,44,0.1)`,
+};
+
+function chip(active: boolean, accent?: string): React.CSSProperties {
+  return {
+    padding: '6px 11px', fontSize: 12, fontFamily: 'inherit', cursor: 'pointer',
+    border: `1px solid ${active ? (accent ?? p.ink) : 'rgba(26,31,44,0.22)'}`,
+    background: active ? (accent ?? p.ink) : 'transparent',
+    color: active ? p.bg : (accent ?? p.ink),
+    whiteSpace: 'nowrap',
+  };
+}
+
+/** Vignette, ou bouton d'ajout si la ligne n'a pas encore d'image. */
+function Vignette({ c, onSet }: { c: ResearchCandidate; onSet: (url: string) => void }) {
+  const [ouvert, setOuvert] = useState(false);
+  const [url, setUrl] = useState('');
+  const [busy, setBusy] = useState(false);
+  const supabase = createClient();
+
+  async function envoyerFichier(file: File | undefined) {
+    if (!file) return;
+    setBusy(true);
+    const ext = file.name.split('.').pop()?.toLowerCase() || 'jpg';
+    const chemin = `candidats/${c.id}.${ext}`;
+    const { error } = await supabase.storage.from('scans')
+      .upload(chemin, file, { upsert: true, cacheControl: '3600' });
+    if (!error) {
+      onSet(supabase.storage.from('scans').getPublicUrl(chemin).data.publicUrl);
+      setOuvert(false);
+    }
+    setBusy(false);
+  }
+
+  if (c.image_url && !ouvert) {
+    return (
+      <button
+        onClick={() => setOuvert(true)}
+        title="Cliquer pour remplacer l'image"
+        style={{ border: 'none', background: 'none', padding: 0, cursor: 'pointer', display: 'block' }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={c.image_url} alt={c.nom}
+          style={{ width: 44, height: 60, objectFit: 'contain', background: p.card,
+                   border: `1px solid ${p.rule}`, display: 'block' }} />
+      </button>
+    );
+  }
+
+  if (!ouvert) {
+    return (
+      <button onClick={() => setOuvert(true)}
+        style={{ ...chip(false, p.brass), width: 44, height: 60, fontSize: 10,
+                 lineHeight: 1.2, padding: 2, cursor: 'pointer' }}>
+        + image
+      </button>
+    );
+  }
+
+  return (
+    <div style={{ width: 220, padding: 10, border: `1px solid ${p.rule}`, background: p.card }}>
+      <input
+        value={url} onChange={e => setUrl(e.target.value)}
+        placeholder="Coller une URL d'image"
+        style={{ width: '100%', fontSize: 12, padding: '6px 0', border: 'none',
+                 borderBottom: `1px solid rgba(26,31,44,0.25)`, background: 'transparent',
+                 color: p.ink, outline: 'none', fontFamily: 'inherit' }} />
+      <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
+        <button disabled={busy || !url.trim()}
+          onClick={() => { onSet(url.trim()); setOuvert(false); setUrl(''); }}
+          style={{ ...chip(true), fontSize: 11 }}>Valider</button>
+        <label style={{ ...chip(false), fontSize: 11, display: 'inline-block' }}>
+          {busy ? '…' : 'Fichier'}
+          <input type="file" accept="image/*" style={{ display: 'none' }}
+            onChange={e => envoyerFichier(e.target.files?.[0])} />
+        </label>
+        <button onClick={() => setOuvert(false)} style={{ ...chip(false), fontSize: 11, border: 'none', color: p.inkSoft }}>
+          Annuler
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function VerificationClient({
+  candidats,
+  stats,
+  kind,
+}: {
+  candidats: ResearchCandidate[];
+  stats: ResearchStats;
+  kind: 'tcg' | 'non_tcg';
+}) {
+  const router = useRouter();
+  const supabase = createClient();
+
+  const [lignes, setLignes] = useState(candidats);
+  const [q, setQ] = useState('');
+  const [langue, setLangue] = useState<string | null>(null);
+  const [preuve, setPreuve] = useState<string | null>(null);
+  const [sansImage, setSansImage] = useState(false);
+  const [statut, setStatut] = useState<string>('a_trier');
+  const [erreur, setErreur] = useState<string | null>(null);
+
+  const langues = useMemo(
+    () => [...new Set(lignes.map(c => c.langue).filter(Boolean))].sort() as string[],
+    [lignes]);
+
+  const filtrees = useMemo(() => {
+    const n = (s: unknown) => String(s ?? '').normalize('NFD')
+      .replace(/[̀-ͯ]/g, '').toLowerCase();
+    const mots = n(q).split(' ').filter(Boolean);
+    return lignes.filter(c => {
+      if (statut !== 'tous' && c.statut !== statut) return false;
+      if (langue && c.langue !== langue) return false;
+      if (preuve && c.preuve !== preuve) return false;
+      if (sansImage && c.image_url) return false;
+      if (mots.length) {
+        const h = n([c.nom, c.serie, c.numero, c.langue, c.annee, c.type_objet, c.note].join(' '));
+        if (!mots.every(m => h.includes(m))) return false;
+      }
+      return true;
+    });
+  }, [lignes, q, langue, preuve, sansImage, statut]);
+
+  async function trier(id: string, s: 'garde' | 'rejete' | 'a_trier') {
+    setErreur(null);
+    const avant = lignes;
+    setLignes(l => l.map(c => (c.id === id ? { ...c, statut: s } : c)));
+    const { error } = await supabase.rpc('trier_candidat', { p_id: id, p_statut: s });
+    if (error) { setLignes(avant); setErreur(error.message); return; }
+    router.refresh();
+  }
+
+  async function definirImage(id: string, url: string) {
+    setErreur(null);
+    const avant = lignes;
+    setLignes(l => l.map(c => (c.id === id ? { ...c, image_url: url } : c)));
+    const { error } = await supabase.rpc('definir_image_candidat', { p_id: id, p_url: url });
+    if (error) { setLignes(avant); setErreur(error.message); }
+  }
+
+  return (
+    <main style={{ padding: '50px 40px 100px' }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap' }}>
+        <div>
+          <div style={{ fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', color: p.brass, marginBottom: 12 }}>
+            File de tri · aucune de ces lignes n&apos;est au catalogue
+          </div>
+          <h1 style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontSize: 46, fontWeight: 400, letterSpacing: -1 }}>
+            Vérification
+          </h1>
+        </div>
+        <div style={{ display: 'flex', gap: 6 }}>
+          <Link href="/verification?kind=tcg" style={{ ...chip(kind === 'tcg'), textDecoration: 'none' }}>
+            Cartes TCG <span style={{ opacity: 0.6 }}>{stats.tcg_a_trier}</span>
+          </Link>
+          <Link href="/verification?kind=non_tcg" style={{ ...chip(kind === 'non_tcg'), textDecoration: 'none' }}>
+            Stickers / Topps / pins <span style={{ opacity: 0.6 }}>{stats.non_tcg_a_trier}</span>
+          </Link>
+        </div>
+      </div>
+
+      <div style={{ display: 'flex', gap: 20, marginTop: 24, fontSize: 12, color: p.inkSoft, flexWrap: 'wrap' }}>
+        <span><strong style={{ color: p.ink }}>{filtrees.length}</strong> affichée{filtrees.length !== 1 ? 's' : ''}</span>
+        <span>{stats.sans_image} sans image</span>
+        <span>{stats.gardes} gardées</span>
+        <span>{stats.rejetes} rejetées</span>
+      </div>
+
+      {/* Filtres */}
+      <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap',
+                    margin: '24px 0', paddingBottom: 18, borderBottom: `1px solid ${p.rule}` }}>
+        <input value={q} onChange={e => setQ(e.target.value)}
+          placeholder="Filtrer : nom, série, numéro…"
+          style={{ flex: 1, minWidth: 220, padding: '9px 0', border: 'none',
+                   borderBottom: `1px solid ${p.rule}`, background: 'transparent',
+                   fontSize: 14, outline: 'none', color: p.ink, fontFamily: 'inherit' }} />
+
+        <select value={statut} onChange={e => setStatut(e.target.value)}
+          style={{ ...chip(false), cursor: 'pointer' }}>
+          <option value="a_trier">À trier</option>
+          <option value="garde">Gardées</option>
+          <option value="rejete">Rejetées</option>
+          <option value="tous">Toutes</option>
+        </select>
+
+        <button onClick={() => setSansImage(v => !v)} style={chip(sansImage, p.brass)}>
+          Sans image
+        </button>
+
+        {(['forte', 'moyenne', 'faible'] as const).map(niv => (
+          <button key={niv} onClick={() => setPreuve(preuve === niv ? null : niv)}
+            style={chip(preuve === niv, PREUVE_COULEUR[niv])}>
+            Preuve {niv}
+          </button>
+        ))}
+
+        <select value={langue ?? ''} onChange={e => setLangue(e.target.value || null)}
+          style={{ ...chip(Boolean(langue)), cursor: 'pointer' }}>
+          <option value="">Toutes langues</option>
+          {langues.map(l => <option key={l} value={l}>{l}</option>)}
+        </select>
+      </div>
+
+      {erreur && (
+        <div style={{ padding: '10px 14px', border: '1px solid #a8485a', color: '#a8485a',
+                      fontSize: 13, marginBottom: 16 }}>{erreur}</div>
+      )}
+
+      {/* Datatable */}
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 900 }}>
+          <thead>
+            <tr>
+              <th style={th}>Image</th>
+              <th style={th}>Nom</th>
+              <th style={th}>Série</th>
+              <th style={th}>Numéro</th>
+              <th style={th}>Langue</th>
+              <th style={th}>Année</th>
+              <th style={th}>Preuve</th>
+              <th style={th}>Lien</th>
+              <th style={{ ...th, textAlign: 'right' }}>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtrees.map(c => (
+              <tr key={c.id} style={{ opacity: c.statut === 'rejete' ? 0.45 : 1 }}>
+                <td style={td}>
+                  <Vignette c={c} onSet={url => definirImage(c.id, url)} />
+                </td>
+                <td style={{ ...td, fontWeight: 500 }}>
+                  {c.nom}
+                  {c.type_objet && c.type_objet !== 'carte' && (
+                    <span style={{ color: p.inkSoft, fontSize: 11 }}> · {c.type_objet}</span>
+                  )}
+                  {c.officiel === false && (
+                    <span style={{ color: '#a8485a', fontSize: 11 }}> · non officiel</span>
+                  )}
+                </td>
+                <td style={{ ...td, color: p.inkSoft }}>{c.serie ?? '—'}</td>
+                <td style={{ ...td, fontFamily: 'ui-monospace, Menlo, monospace', fontSize: 12 }}>
+                  {c.numero ?? '—'}
+                </td>
+                <td style={td}>{c.langue ?? '—'}</td>
+                <td style={{ ...td, color: p.inkSoft }}>{c.annee ?? '—'}</td>
+                <td style={td}>
+                  {c.preuve && (
+                    <span style={{ fontSize: 11, color: PREUVE_COULEUR[c.preuve] ?? p.inkSoft }}>
+                      {c.preuve}
+                    </span>
+                  )}
+                </td>
+                <td style={td}>
+                  {c.source_url
+                    ? <a href={c.source_url} target="_blank" rel="noreferrer noopener"
+                        style={{ color: p.water, fontSize: 12 }}>source ↗</a>
+                    : <span style={{ color: p.inkSoft, fontSize: 12 }}>—</span>}
+                </td>
+                <td style={{ ...td, textAlign: 'right', whiteSpace: 'nowrap' }}>
+                  {c.statut === 'a_trier' ? (
+                    <>
+                      <button onClick={() => trier(c.id, 'garde')}
+                        style={{ ...chip(false, '#2a6a4a'), fontSize: 11, marginRight: 6 }}>Garder</button>
+                      <button onClick={() => trier(c.id, 'rejete')}
+                        style={{ ...chip(false, '#a8485a'), fontSize: 11 }}>Rejeter</button>
+                    </>
+                  ) : (
+                    <button onClick={() => trier(c.id, 'a_trier')}
+                      style={{ ...chip(false), fontSize: 11, color: p.inkSoft, border: 'none' }}>
+                      {STATUT_LABEL[c.statut]} · annuler
+                    </button>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {filtrees.length === 0 && (
+        <div style={{ textAlign: 'center', padding: '70px 0', color: p.inkSoft, fontSize: 14 }}>
+          Rien à trier ici avec ces filtres.
+        </div>
+      )}
+    </main>
+  );
+}

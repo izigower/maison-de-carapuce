@@ -102,6 +102,37 @@ export interface SearchParamsShape {
   page: number;
 }
 
+/** Ligne de la file de tri des recherches (table research_candidates). */
+export interface ResearchCandidate {
+  id: string;
+  kind: 'tcg' | 'non_tcg';
+  nom: string;
+  serie: string | null;
+  numero: string | null;
+  annee: number | null;
+  langue: string | null;
+  pays: string | null;
+  type_objet: string | null;
+  officiel: boolean | null;
+  image_url: string | null;
+  source_url: string | null;
+  preuve: 'forte' | 'moyenne' | 'faible' | 'marchand' | 'aucune' | null;
+  verdict: string | null;
+  origine: string | null;
+  note: string | null;
+  statut: 'a_trier' | 'garde' | 'rejete' | 'importe';
+  created_at: string;
+}
+
+export interface ResearchStats {
+  tcg_a_trier: number;
+  non_tcg_a_trier: number;
+  sans_image: number;
+  gardes: number;
+  rejetes: number;
+  langues: Facet[];
+}
+
 export interface SimilarCard {
   id: string;
   set_name: string;

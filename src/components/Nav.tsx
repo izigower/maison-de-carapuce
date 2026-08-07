@@ -18,7 +18,9 @@ export default function Nav({ user, isCurator = false }: { user: User | null; is
   const router = useRouter();
   const supabase = createClient();
   const items = isCurator
-    ? [...NAV_ITEMS, { href: '/admin', label: 'Conservation' }]
+    ? [...NAV_ITEMS,
+       { href: '/verification', label: 'Vérification' },
+       { href: '/admin', label: 'Conservation' }]
     : NAV_ITEMS;
 
   async function handleAuth() {
