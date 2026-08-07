@@ -7,13 +7,20 @@ import type { Card, SiteStats } from '@/types';
 
 const VARIANTS = ['wave', 'drop', 'shell', 'ripple', 'depth', 'current'] as const;
 
+/**
+ * Affiché uniquement si get_site_stats() échoue. Volontairement à zéro :
+ * une archive dont la raison d'être est la vérifiabilité ne peut pas
+ * afficher des compteurs inventés.
+ */
 const FALLBACK_STATS: SiteStats = {
-  total_cards: 412,
-  total_langs: 11,
-  total_sets: 84,
-  contributors: 1247,
-  items_received: 89,
-  years_covered: '1996 — 2026',
+  total_cards: 0,
+  total_langs: 0,
+  total_sets: 0,
+  total_owned: 0,
+  contributors: 0,
+  pending: 0,
+  items_received: 0,
+  years_covered: '—',
 };
 
 function museumBtn(primary: boolean): React.CSSProperties {

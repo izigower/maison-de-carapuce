@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { CARD_PALETTES, p } from '@/lib/palette';
+import { resolveCardImage } from '@/lib/cardImage';
 import CardTags from './CardTags';
 import type { Card } from '@/types';
 
@@ -24,22 +25,26 @@ export default function CardPlaceholder({
 }: Props) {
   const [c1, c2, c3] = CARD_PALETTES[variant] || CARD_PALETTES.wave;
 
-  if (card?.image_url) {
+  const image = card ? resolveCardImage(card) : null;
+
+  if (card && image) {
     return (
       <div style={{
         width: '100%',
         height: '100%',
         position: 'relative',
         overflow: 'hidden',
+        // Le visuel officiel doit être vu en entier : pas de recadrage.
+        background: c1,
         border: `1px solid ${p.ink}`,
         boxShadow: large ? '0 30px 80px rgba(20,30,50,0.15)' : 'none',
       }}>
         <Image
-          src={card.image_url}
-          alt={`${card.set_name} ${card.lang} ${card.variant}`}
+          src={image.src}
+          alt={`Carapuce — ${card.set_name} (${card.lang}, ${card.variant})`}
           fill
-          style={{ objectFit: 'cover' }}
-          sizes="(max-width: 768px) 50vw, 25vw"
+          style={{ objectFit: 'contain' }}
+          sizes={large ? '(max-width: 768px) 90vw, 45vw' : '(max-width: 768px) 50vw, 25vw'}
         />
         {showTags && <CardTags card={card} owned={owned} position={tagPosition} small={!large} />}
       </div>
