@@ -36,6 +36,26 @@ function chip(active: boolean, accent?: string): React.CSSProperties {
   };
 }
 
+/** Libellés lisibles des types d'objet, pour séparer cartes et autocollants. */
+const TYPE_LABEL: Record<string, string> = {
+  carte: 'Cartes', sticker: 'Autocollants', tazo: 'Tazos / Flippos',
+  carddass: 'Carddass', pins: 'Pin\'s', figurine: 'Figurines',
+  deck: 'Decks', autre: 'Autres',
+};
+
+const IMAGE_STATUT: Record<string, { label: string; couleur: string; aide: string }> = {
+  ok: { label: '', couleur: '', aide: '' },
+  bloquee: {
+    label: 'à récupérer', couleur: '#a07a3a',
+    aide: "L'image existe mais l'hôte refuse tout accès serveur (403). Ouvre-la dans ton navigateur, enregistre-la, puis ajoute-la ici.",
+  },
+  morte: {
+    label: 'lien mort', couleur: '#a8485a',
+    aide: "L'URL trouvée ne répond plus (404 ou domaine injoignable).",
+  },
+  absente: { label: 'aucune image', couleur: p.inkSoft, aide: 'Aucune image trouvée par la recherche.' },
+};
+
 /** Vignette, ou bouton d'ajout si la ligne n'a pas encore d'image. */
 function Vignette({ c, onSet }: { c: ResearchCandidate; onSet: (url: string) => void }) {
   const [ouvert, setOuvert] = useState(false);
@@ -73,12 +93,25 @@ function Vignette({ c, onSet }: { c: ResearchCandidate; onSet: (url: string) => 
   }
 
   if (!ouvert) {
+    const st = IMAGE_STATUT[c.image_statut] ?? IMAGE_STATUT.absente;
     return (
-      <button onClick={() => setOuvert(true)}
-        style={{ ...chip(false, p.brass), width: 44, height: 60, fontSize: 10,
-                 lineHeight: 1.2, padding: 2, cursor: 'pointer' }}>
-        + image
-      </button>
+      <div style={{ display: 'grid', gap: 3, width: 78 }}>
+        <button onClick={() => setOuvert(true)} title={st.aide}
+          style={{ ...chip(false, st.couleur || p.brass), width: 78, height: 52,
+                   fontSize: 10, lineHeight: 1.25, padding: 2, cursor: 'pointer' }}>
+          + image
+        </button>
+        {c.image_statut !== 'absente' && (
+          <span style={{ fontSize: 9, color: st.couleur, textAlign: 'center' }}>{st.label}</span>
+        )}
+        {c.image_url_source && (
+          <a href={c.image_url_source} target="_blank" rel="noreferrer noopener"
+             title="S'ouvre dans ton navigateur, où l'hôte ne bloque pas"
+             style={{ fontSize: 9, color: p.water, textAlign: 'center' }}>
+            voir la source ↗
+          </a>
+        )}
+      </div>
     );
   }
 
@@ -124,12 +157,24 @@ export default function VerificationClient({
   const [langue, setLangue] = useState<string | null>(null);
   const [preuve, setPreuve] = useState<string | null>(null);
   const [sansImage, setSansImage] = useState(false);
+  const [type, setType] = useState<string | null>(null);
   const [statut, setStatut] = useState<string>('a_trier');
   const [erreur, setErreur] = useState<string | null>(null);
 
   const langues = useMemo(
     () => [...new Set(lignes.map(c => c.langue).filter(Boolean))].sort() as string[],
     [lignes]);
+
+  /** Types réellement présents dans cet onglet, avec leur effectif. */
+  const types = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const c of lignes) {
+      if (c.statut !== 'a_trier') continue;
+      const t = c.type_objet ?? 'autre';
+      m.set(t, (m.get(t) ?? 0) + 1);
+    }
+    return [...m].sort((a, b) => b[1] - a[1]);
+  }, [lignes]);
 
   const filtrees = useMemo(() => {
     const n = (s: unknown) => String(s ?? '').normalize('NFD')
@@ -139,14 +184,15 @@ export default function VerificationClient({
       if (statut !== 'tous' && c.statut !== statut) return false;
       if (langue && c.langue !== langue) return false;
       if (preuve && c.preuve !== preuve) return false;
-      if (sansImage && c.image_url) return false;
+      if (type && (c.type_objet ?? 'autre') !== type) return false;
+      if (sansImage && c.image_statut === 'ok') return false;
       if (mots.length) {
         const h = n([c.nom, c.serie, c.numero, c.langue, c.annee, c.type_objet, c.note].join(' '));
         if (!mots.every(m => h.includes(m))) return false;
       }
       return true;
     });
-  }, [lignes, q, langue, preuve, sansImage, statut]);
+  }, [lignes, q, langue, preuve, sansImage, type, statut]);
 
   async function trier(id: string, s: 'garde' | 'rejete' | 'a_trier') {
     setErreur(null);
@@ -188,10 +234,25 @@ export default function VerificationClient({
 
       <div style={{ display: 'flex', gap: 20, marginTop: 24, fontSize: 12, color: p.inkSoft, flexWrap: 'wrap' }}>
         <span><strong style={{ color: p.ink }}>{filtrees.length}</strong> affichée{filtrees.length !== 1 ? 's' : ''}</span>
-        <span>{stats.sans_image} sans image</span>
+        <span>{stats.sans_image} sans image utilisable</span>
+        <span>{stats.image_bloquee} à récupérer à la main</span>
         <span>{stats.gardes} gardées</span>
         <span>{stats.rejetes} rejetées</span>
       </div>
+
+      {/* Séparation par type d'objet : cartes / autocollants / tazos… */}
+      {types.length > 1 && (
+        <div style={{ display: 'flex', gap: 6, marginTop: 20, flexWrap: 'wrap' }}>
+          <button onClick={() => setType(null)} style={chip(type === null)}>
+            Tout <span style={{ opacity: 0.6 }}>{types.reduce((s, [, n]) => s + n, 0)}</span>
+          </button>
+          {types.map(([t, n]) => (
+            <button key={t} onClick={() => setType(type === t ? null : t)} style={chip(type === t)}>
+              {TYPE_LABEL[t] ?? t} <span style={{ opacity: 0.6 }}>{n}</span>
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Filtres */}
       <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap',
@@ -211,7 +272,7 @@ export default function VerificationClient({
         </select>
 
         <button onClick={() => setSansImage(v => !v)} style={chip(sansImage, p.brass)}>
-          Sans image
+          Image à faire <span style={{ opacity: 0.6 }}>{stats.sans_image}</span>
         </button>
 
         {(['forte', 'moyenne', 'faible'] as const).map(niv => (

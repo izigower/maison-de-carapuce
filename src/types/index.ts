@@ -115,6 +115,14 @@ export interface ResearchCandidate {
   type_objet: string | null;
   officiel: boolean | null;
   image_url: string | null;
+  /** URL d'origine conservée quand elle est inutilisable côté serveur. */
+  image_url_source: string | null;
+  /**
+   * ok = URL vérifiée, renvoie une vraie image ;
+   * bloquee = l'image existe mais l'hôte refuse tout accès serveur (403) ;
+   * morte = URL trouvée mais qui ne répond plus ; absente = rien trouvé.
+   */
+  image_statut: 'ok' | 'bloquee' | 'absente' | 'morte';
   source_url: string | null;
   preuve: 'forte' | 'moyenne' | 'faible' | 'marchand' | 'aucune' | null;
   verdict: string | null;
@@ -128,9 +136,10 @@ export interface ResearchStats {
   tcg_a_trier: number;
   non_tcg_a_trier: number;
   sans_image: number;
+  image_bloquee: number;
   gardes: number;
   rejetes: number;
-  langues: Facet[];
+  types: Facet[];
 }
 
 export interface SimilarCard {

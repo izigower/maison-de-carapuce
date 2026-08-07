@@ -19,7 +19,7 @@ interface Props {
 
 const EMPTY: ResearchStats = {
   tcg_a_trier: 0, non_tcg_a_trier: 0, sans_image: 0,
-  gardes: 0, rejetes: 0, langues: [],
+  image_bloquee: 0, gardes: 0, rejetes: 0, types: [],
 };
 
 export default async function VerificationPage({ searchParams }: Props) {
