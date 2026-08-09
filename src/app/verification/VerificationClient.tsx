@@ -56,11 +56,46 @@ const IMAGE_STATUT: Record<string, { label: string; couleur: string; aide: strin
   absente: { label: 'aucune image', couleur: p.inkSoft, aide: 'Aucune image trouvée par la recherche.' },
 };
 
+/**
+ * Aperçu agrandi au survol. Position fixe suivant le curseur, recadrée pour
+ * ne jamais sortir de l'écran — sur les dernières lignes du tableau, un panneau
+ * ancré vers le bas serait coupé.
+ */
+function ApercuZoom({ src, legende, x, y }: { src: string; legende: string; x: number; y: number }) {
+  const L = 300, H = 420, M = 12;
+  const gauche = typeof window !== 'undefined' && x + L + M > window.innerWidth
+    ? Math.max(M, x - L - 60)
+    : x;
+  const haut = typeof window !== 'undefined'
+    ? Math.min(Math.max(M, y), window.innerHeight - H - M)
+    : y;
+
+  return (
+    <div
+      role="presentation"
+      style={{
+        position: 'fixed', left: gauche, top: haut, width: L, zIndex: 200,
+        pointerEvents: 'none', background: p.bg, border: `1px solid ${p.ink}`,
+        boxShadow: '0 24px 60px rgba(20,30,50,0.28)', padding: 8,
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={legende}
+        style={{ width: '100%', height: H - 40, objectFit: 'contain', display: 'block', background: p.card }} />
+      <div style={{ fontSize: 11, color: p.inkSoft, marginTop: 6, textAlign: 'center',
+                    whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        {legende}
+      </div>
+    </div>
+  );
+}
+
 /** Vignette, ou bouton d'ajout si la ligne n'a pas encore d'image. */
 function Vignette({ c, onSet }: { c: ResearchCandidate; onSet: (url: string) => void }) {
   const [ouvert, setOuvert] = useState(false);
   const [url, setUrl] = useState('');
   const [busy, setBusy] = useState(false);
+  const [zoom, setZoom] = useState<{ x: number; y: number } | null>(null);
   const supabase = createClient();
 
   async function envoyerFichier(file: File | undefined) {
@@ -79,16 +114,26 @@ function Vignette({ c, onSet }: { c: ResearchCandidate; onSet: (url: string) => 
 
   if (c.image_url && !ouvert) {
     return (
-      <button
-        onClick={() => setOuvert(true)}
-        title="Cliquer pour remplacer l'image"
-        style={{ border: 'none', background: 'none', padding: 0, cursor: 'pointer', display: 'block' }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={c.image_url} alt={c.nom}
-          style={{ width: 44, height: 60, objectFit: 'contain', background: p.card,
-                   border: `1px solid ${p.rule}`, display: 'block' }} />
-      </button>
+      <>
+        <button
+          onClick={() => setOuvert(true)}
+          onMouseEnter={e => {
+            const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+            setZoom({ x: r.right, y: r.top });
+          }}
+          onMouseMove={e => setZoom({ x: e.clientX + 24, y: e.clientY - 140 })}
+          onMouseLeave={() => setZoom(null)}
+          title="Survoler pour agrandir · cliquer pour remplacer"
+          style={{ border: 'none', background: 'none', padding: 0, cursor: 'zoom-in', display: 'block' }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={c.image_url} alt={c.nom}
+            style={{ width: 44, height: 60, objectFit: 'contain', background: p.card,
+                     border: `1px solid ${p.rule}`, display: 'block' }} />
+        </button>
+
+        {zoom && <ApercuZoom src={c.image_url} legende={c.nom} x={zoom.x} y={zoom.y} />}
+      </>
     );
   }
 
