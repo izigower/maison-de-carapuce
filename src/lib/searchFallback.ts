@@ -48,12 +48,17 @@ export function filterCards(cards: Card[], p: SearchParamsShape): Card[] {
 
 export function sortCards(cards: Card[], sort: SearchParamsShape['sort']): Card[] {
   const byYear = (a: Card, b: Card) => (a.year ?? 9999) - (b.year ?? 9999);
+  // Même illustration à la suite, ordre manuel prioritaire — comme la RPC.
+  const byDesign = (a: Card, b: Card) =>
+    (a.ordre_manuel ?? Infinity) - (b.ordre_manuel ?? Infinity)
+    || String(a.oeuvre ?? '').localeCompare(String(b.oeuvre ?? ''));
   const tie = (a: Card, b: Card) =>
     a.set_name.localeCompare(b.set_name) ||
     a.lang.localeCompare(b.lang) ||
     a.card_number.localeCompare(b.card_number);
 
   return [...cards].sort((a, b) => {
+    if (sort === 'design') return byDesign(a, b) || byYear(a, b) || tie(a, b);
     if (sort === 'year_desc') return -byYear(a, b) || tie(a, b);
     if (sort === 'set_asc') return tie(a, b);
     return byYear(a, b) || tie(a, b);

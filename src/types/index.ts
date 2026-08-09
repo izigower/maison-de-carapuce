@@ -30,6 +30,10 @@ export interface Card {
    * 'cameo' = Carapuce n'apparaît que dans l'illustration d'une autre carte.
    */
   role?: 'sujet' | 'cameo';
+  /** Clé de regroupement par illustration : même dessin, toutes langues. */
+  oeuvre?: string | null;
+  /** Position imposée à la main, prioritaire sur le regroupement auto. */
+  ordre_manuel?: number | null;
   /** Nom réellement imprimé sur la carte, quand ce n'est pas Carapuce. */
   printed_name?: string | null;
   created_at: string;
@@ -122,7 +126,8 @@ export interface SearchParamsShape {
   yearMax: number | null;
   /** true = seulement les fiches sans visuel. */
   missingImage: boolean | null;
-  sort: 'year_asc' | 'year_desc' | 'set_asc';
+  /** 'design' regroupe les impressions partageant la même illustration. */
+  sort: 'design' | 'year_asc' | 'year_desc' | 'set_asc';
   page: number;
 }
 

@@ -2,7 +2,7 @@ import type { SearchParamsShape } from '@/types';
 
 export const PAGE_SIZE = 60;
 
-const SORTS = ['year_asc', 'year_desc', 'set_asc'] as const;
+const SORTS = ['design', 'year_asc', 'year_desc', 'set_asc'] as const;
 
 type RawParams = Record<string, string | string[] | undefined>;
 
@@ -30,7 +30,7 @@ export function parseSearchParams(raw: RawParams): SearchParamsShape {
     yearMin: int(raw.from),
     yearMax: int(raw.to),
     missingImage: first(raw.sansvisuel) === '1' ? true : null,
-    sort: SORTS.includes(sortRaw) ? sortRaw : 'year_asc',
+    sort: SORTS.includes(sortRaw) ? sortRaw : 'design',
     page: Math.max(1, int(raw.page) ?? 1),
   };
 }
@@ -45,7 +45,7 @@ export function toQueryString(s: SearchParamsShape): string {
   if (s.yearMin !== null) p.set('from', String(s.yearMin));
   if (s.yearMax !== null) p.set('to', String(s.yearMax));
   if (s.missingImage) p.set('sansvisuel', '1');
-  if (s.sort !== 'year_asc') p.set('sort', s.sort);
+  if (s.sort !== 'design') p.set('sort', s.sort);
   if (s.page > 1) p.set('page', String(s.page));
   return p.toString();
 }

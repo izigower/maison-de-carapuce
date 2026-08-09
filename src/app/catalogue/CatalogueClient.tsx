@@ -10,13 +10,27 @@ import type { Card, CatalogueFacets, SearchParamsShape } from '@/types';
 
 const VARIANTS = ['wave', 'drop', 'shell', 'ripple', 'depth', 'current'] as const;
 
+/**
+ * Noms de langue en français plutôt qu'en écriture native : « ไทย » ou « 中文 »
+ * ne se lisent pas quand on ne connaît pas l'alphabet, et « ZH-Hans » /
+ * « ZH-Hant » sont des codes ISO opaques pour un collectionneur.
+ */
 const LANG_LABELS: Record<string, string> = {
-  FR: 'Français', EN: 'English', JP: '日本語', DE: 'Deutsch',
-  IT: 'Italiano', ES: 'Español', KR: '한국어', PT: 'Português',
-  ZH: '中文', ID: 'Indonesia', NL: 'Nederlands', PL: 'Polski', TH: 'ไทย',
+  FR: 'Français', EN: 'Anglais', DE: 'Allemand', IT: 'Italien',
+  ES: 'Espagnol', PT: 'Portugais', NL: 'Néerlandais', PL: 'Polonais',
+  RU: 'Russe', JP: 'Japonais', KR: 'Coréen', TH: 'Thaïlandais',
+  ID: 'Indonésien',
+  ZH: 'Chinois traditionnel',
+  'ZH-HANT': 'Chinois traditionnel',
+  'ZH-HANS': 'Chinois simplifié',
+  HU: 'Hongrois', INT: 'International',
 };
 
+const langue = (code: string | null | undefined) =>
+  LANG_LABELS[String(code ?? '').toUpperCase()] ?? code ?? '—';
+
 const SORT_LABELS: Record<SearchParamsShape['sort'], string> = {
+  design: 'Par illustration',
   year_asc: 'Chronologique',
   year_desc: 'Plus récentes',
   set_asc: 'Par set (A–Z)',
@@ -187,7 +201,7 @@ export default function CatalogueClient({
               {facets.langs.map(f => (
                 <button key={f.value} onClick={() => toggle('langs', f.value)}
                   style={chipStyle(params.langs.includes(f.value))}>
-                  {LANG_LABELS[f.value] ?? f.value}
+                  {langue(f.value)}
                   <span style={{ opacity: 0.55, marginLeft: 6 }}>{f.count}</span>
                 </button>
               ))}
@@ -320,7 +334,7 @@ export default function CatalogueClient({
                 <CardPlaceholder card={card} variant={VARIANTS[i % 6]} owned={card.is_owned} />
               </div>
               <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: p.brass }}>
-                {card.lang} · {card.year ?? 'année inconnue'}
+                {langue(card.lang)} · {card.year ?? 'année inconnue'}
                 {card.role === 'cameo' && (
                   <span style={{ color: p.water }}> · apparition</span>
                 )}
