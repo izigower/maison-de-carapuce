@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
@@ -189,24 +189,31 @@ export default function VerificationClient({
   candidats,
   stats,
   kind,
+  statut,
   nbMasquees,
 }: {
   candidats: ResearchCandidate[];
   stats: ResearchStats;
   kind: 'tcg' | 'non_tcg';
+  statut: string;
   nbMasquees: number;
 }) {
   const router = useRouter();
   const supabase = createClient();
 
   const [lignes, setLignes] = useState(candidats);
+
+  // useState ne relit son argument qu'au montage : sans cette resynchronisation,
+  // les donnees fraiches renvoyees par router.refresh() n'atteignaient jamais
+  // l'affichage, et une ligne triee pouvait resurgir.
+  useEffect(() => { setLignes(candidats); }, [candidats]);
   const [q, setQ] = useState('');
   const [langue, setLangue] = useState<string | null>(null);
   const [preuve, setPreuve] = useState<string | null>(null);
   const [sansImage, setSansImage] = useState(false);
   const [type, setType] = useState<string | null>(null);
-  const [statut, setStatut] = useState<string>('a_trier');
   const [erreur, setErreur] = useState<string | null>(null);
+  const [confirmation, setConfirmation] = useState<string | null>(null);
 
   const langues = useMemo(
     () => [...new Set(lignes.map(c => c.langue).filter(Boolean))].sort() as string[],
@@ -228,7 +235,7 @@ export default function VerificationClient({
       .replace(/[̀-ͯ]/g, '').toLowerCase();
     const mots = n(q).split(' ').filter(Boolean);
     return lignes.filter(c => {
-      if (statut !== 'tous' && c.statut !== statut) return false;
+      // Le statut est déjà filtré côté serveur : on ne le refiltre pas ici.
       if (langue && c.langue !== langue) return false;
       if (preuve && c.preuve !== preuve) return false;
       if (type && (c.type_objet ?? 'autre') !== type) return false;
@@ -239,14 +246,25 @@ export default function VerificationClient({
       }
       return true;
     });
-  }, [lignes, q, langue, preuve, sansImage, type, statut]);
+  }, [lignes, q, langue, preuve, sansImage, type]);
 
   async function trier(id: string, s: 'garde' | 'rejete' | 'a_trier') {
     setErreur(null);
     const avant = lignes;
-    setLignes(l => l.map(c => (c.id === id ? { ...c, statut: s } : c)));
+    const ligne = lignes.find(c => c.id === id);
+
+    // Retrait immédiat de la liste, puis on demande au serveur de confirmer.
+    setLignes(l => l.filter(c => c.id !== id));
+
     const { error } = await supabase.rpc('trier_candidat', { p_id: id, p_statut: s });
-    if (error) { setLignes(avant); setErreur(error.message); return; }
+    if (error) {
+      setLignes(avant);
+      setErreur(`Impossible de trier « ${ligne?.nom ?? id} » : ${error.message}`);
+      return;
+    }
+    setConfirmation(
+      `${ligne?.nom ?? 'Ligne'} — ${s === 'garde' ? 'gardée' : s === 'rejete' ? 'rejetée' : 'remise à trier'}.`,
+    );
     router.refresh();
   }
 
@@ -315,7 +333,8 @@ export default function VerificationClient({
                    borderBottom: `1px solid ${p.rule}`, background: 'transparent',
                    fontSize: 14, outline: 'none', color: p.ink, fontFamily: 'inherit' }} />
 
-        <select value={statut} onChange={e => setStatut(e.target.value)}
+        <select value={statut}
+          onChange={e => router.push(`/verification?kind=${kind}&statut=${e.target.value}`)}
           style={{ ...chip(false), cursor: 'pointer' }}>
           <option value="a_trier">À trier</option>
           <option value="garde">Gardées</option>
@@ -344,6 +363,17 @@ export default function VerificationClient({
       {erreur && (
         <div style={{ padding: '10px 14px', border: '1px solid #a8485a', color: '#a8485a',
                       fontSize: 13, marginBottom: 16 }}>{erreur}</div>
+      )}
+      {confirmation && !erreur && (
+        <div style={{ padding: '10px 14px', border: `1px solid #2a6a4a`, color: '#2a6a4a',
+                      fontSize: 13, marginBottom: 16, display: 'flex',
+                      justifyContent: 'space-between', gap: 12 }}>
+          <span>{confirmation}</span>
+          <button onClick={() => setConfirmation(null)}
+            style={{ border: 'none', background: 'none', color: '#2a6a4a', cursor: 'pointer', fontSize: 12 }}>
+            ✕
+          </button>
+        </div>
       )}
 
       {/* Datatable */}

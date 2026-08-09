@@ -67,9 +67,20 @@ export default async function VerificationPage({ searchParams }: Props) {
     );
   }
 
-  const { data: rows } = await supabase
+  // Le statut est filtré CÔTÉ SERVEUR : une ligne triée doit réellement
+  // disparaître de la liste au rafraîchissement, pas seulement être cachée
+  // par un filtre client qu'un remontage réinitialise.
+  const statutBrut = Array.isArray(sp.statut) ? sp.statut[0] : sp.statut;
+  const statut = ['a_trier', 'garde', 'rejete', 'tous'].includes(statutBrut ?? '')
+    ? (statutBrut as string)
+    : 'a_trier';
+
+  let requete = supabase
     .from('research_candidates').select('*')
-    .eq('kind', onglet)
+    .eq('kind', onglet);
+  if (statut !== 'tous') requete = requete.eq('statut', statut);
+
+  const { data: rows } = await requete
     .order('preuve', { ascending: true })
     .order('langue', { ascending: true })
     .order('annee', { ascending: true });
@@ -79,6 +90,7 @@ export default async function VerificationPage({ searchParams }: Props) {
       candidats={(rows ?? []) as ResearchCandidate[]}
       stats={(stats as ResearchStats) ?? EMPTY}
       kind={onglet}
+      statut={statut}
       nbMasquees={nbMasquees}
     />
   );
