@@ -214,6 +214,7 @@ export default function VerificationClient({
   const [type, setType] = useState<string | null>(null);
   const [erreur, setErreur] = useState<string | null>(null);
   const [confirmation, setConfirmation] = useState<string | null>(null);
+  const [derniereFiche, setDerniereFiche] = useState<string | null>(null);
 
   const langues = useMemo(
     () => [...new Set(lignes.map(c => c.langue).filter(Boolean))].sort() as string[],
@@ -248,6 +249,12 @@ export default function VerificationClient({
     });
   }, [lignes, q, langue, preuve, sansImage, type]);
 
+  /**
+   * « Garder » ne se contente plus de changer un statut : la ligne part
+   * réellement au catalogue. La fiche y entre en verification_status
+   * « pending », donc dans le pipeline, pas directement en public — et masquée
+   * si elle n'a pas de visuel, comme le reste du catalogue.
+   */
   async function trier(id: string, s: 'garde' | 'rejete' | 'a_trier') {
     setErreur(null);
     const avant = lignes;
@@ -256,15 +263,30 @@ export default function VerificationClient({
     // Retrait immédiat de la liste, puis on demande au serveur de confirmer.
     setLignes(l => l.filter(c => c.id !== id));
 
+    if (s === 'garde') {
+      const { data: cardId, error } = await supabase.rpc('importer_candidat', { p_id: id });
+      if (error) {
+        setLignes(avant);
+        setErreur(`Impossible d'importer « ${ligne?.nom ?? id} » : ${error.message}`);
+        return;
+      }
+      setConfirmation(
+        `${ligne?.nom ?? 'Ligne'} ajoutée au catalogue` +
+        (ligne?.image_statut === 'ok' ? '.' : ' — masquée tant qu\'elle n\'a pas d\'image.'),
+      );
+      setDerniereFiche(typeof cardId === 'string' ? cardId : null);
+      router.refresh();
+      return;
+    }
+
     const { error } = await supabase.rpc('trier_candidat', { p_id: id, p_statut: s });
     if (error) {
       setLignes(avant);
       setErreur(`Impossible de trier « ${ligne?.nom ?? id} » : ${error.message}`);
       return;
     }
-    setConfirmation(
-      `${ligne?.nom ?? 'Ligne'} — ${s === 'garde' ? 'gardée' : s === 'rejete' ? 'rejetée' : 'remise à trier'}.`,
-    );
+    setConfirmation(`${ligne?.nom ?? 'Ligne'} — ${s === 'rejete' ? 'rejetée' : 'remise à trier'}.`);
+    setDerniereFiche(null);
     router.refresh();
   }
 
@@ -337,7 +359,8 @@ export default function VerificationClient({
           onChange={e => router.push(`/verification?kind=${kind}&statut=${e.target.value}`)}
           style={{ ...chip(false), cursor: 'pointer' }}>
           <option value="a_trier">À trier</option>
-          <option value="garde">Gardées</option>
+          <option value="garde">Gardées (non importées)</option>
+          <option value="importe">Importées au catalogue</option>
           <option value="rejete">Rejetées</option>
           <option value="tous">Toutes</option>
         </select>
@@ -368,8 +391,19 @@ export default function VerificationClient({
         <div style={{ padding: '10px 14px', border: `1px solid #2a6a4a`, color: '#2a6a4a',
                       fontSize: 13, marginBottom: 16, display: 'flex',
                       justifyContent: 'space-between', gap: 12 }}>
-          <span>{confirmation}</span>
-          <button onClick={() => setConfirmation(null)}
+          <span>
+            {confirmation}
+            {derniereFiche && (
+              <>
+                {' '}
+                <Link href={`/carte/${derniereFiche}`} target="_blank"
+                  style={{ color: '#2a6a4a', textDecoration: 'underline' }}>
+                  voir la fiche ↗
+                </Link>
+              </>
+            )}
+          </span>
+          <button onClick={() => { setConfirmation(null); setDerniereFiche(null); }}
             style={{ border: 'none', background: 'none', color: '#2a6a4a', cursor: 'pointer', fontSize: 12 }}>
             ✕
           </button>
@@ -430,7 +464,7 @@ export default function VerificationClient({
                   {c.statut === 'a_trier' ? (
                     <>
                       <button onClick={() => trier(c.id, 'garde')}
-                        style={{ ...chip(false, '#2a6a4a'), fontSize: 11, marginRight: 6 }}>Garder</button>
+                        style={{ ...chip(false, '#2a6a4a'), fontSize: 11, marginRight: 6 }}>Garder → catalogue</button>
                       <button onClick={() => trier(c.id, 'rejete')}
                         style={{ ...chip(false, '#a8485a'), fontSize: 11 }}>Rejeter</button>
                     </>
