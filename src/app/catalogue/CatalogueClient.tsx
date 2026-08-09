@@ -321,6 +321,9 @@ export default function CatalogueClient({
               </div>
               <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: p.brass }}>
                 {card.lang} · {card.year ?? 'année inconnue'}
+                {card.role === 'cameo' && (
+                  <span style={{ color: p.water }}> · apparition</span>
+                )}
               </div>
               <div style={{
                 fontFamily: 'var(--font-playfair), Georgia, serif',
@@ -328,6 +331,13 @@ export default function CatalogueClient({
               }}>
                 {card.set_name}
               </div>
+              {/* Sur un cameo, la carte porte un autre nom : le taire donnerait
+                  l'impression d'une fiche erronée. */}
+              {card.role === 'cameo' && card.printed_name && (
+                <div style={{ fontSize: 12, color: p.water, marginTop: 3, fontStyle: 'italic' }}>
+                  {card.printed_name}
+                </div>
+              )}
               <div style={{ color: p.inkSoft, fontSize: 12, marginTop: 4 }}>
                 {card.variant} · {card.card_number}
               </div>

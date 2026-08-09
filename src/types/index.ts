@@ -25,6 +25,13 @@ export interface Card {
   source_url: string | null;
   /** Retirée du catalogue public tant qu'elle n'a pas de visuel. */
   masquee?: boolean;
+  /**
+   * 'sujet' = la carte représente Carapuce ;
+   * 'cameo' = Carapuce n'apparaît que dans l'illustration d'une autre carte.
+   */
+  role?: 'sujet' | 'cameo';
+  /** Nom réellement imprimé sur la carte, quand ce n'est pas Carapuce. */
+  printed_name?: string | null;
   created_at: string;
 }
 

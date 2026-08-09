@@ -17,17 +17,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const supabase = await createClient();
   const { data } = await supabase
     .from('cards')
-    .select('set_name, year, lang, variant, card_number, image_url, back_image_url')
+    .select('set_name, year, lang, variant, card_number, image_url, back_image_url, role, printed_name')
     .eq('id', id)
     .single();
 
   if (!data) return { title: `Carte introuvable — La Maison de Carapuce` };
 
-  const title = `Carapuce — ${data.set_name} (${data.lang}, ${data.variant})`;
-  const description =
-    `Carapuce n°${data.card_number} du set ${data.set_name}` +
-    `${data.year ? ` (${data.year})` : ''}, édition ${data.lang}, variante ${data.variant}. ` +
-    `Fiche de l'archive collaborative La Maison de Carapuce.`;
+  // Sur un cameo, la carte porte un autre nom : annoncer « Carapuce » dans le
+  // titre et l'aperçu de partage serait faux.
+  const cameo = data.role === 'cameo';
+  const nom = cameo ? (data.printed_name ?? 'Carte') : 'Carapuce';
+
+  const title = `${nom} — ${data.set_name} (${data.lang}, ${data.variant})`;
+  const description = cameo
+    ? `${nom}, n°${data.card_number} du set ${data.set_name}` +
+      `${data.year ? ` (${data.year})` : ''} — Carapuce apparaît dans l'illustration. ` +
+      `Fiche de l'archive collaborative La Maison de Carapuce.`
+    : `Carapuce n°${data.card_number} du set ${data.set_name}` +
+      `${data.year ? ` (${data.year})` : ''}, édition ${data.lang}, variante ${data.variant}. ` +
+      `Fiche de l'archive collaborative La Maison de Carapuce.`;
 
   const preview = resolveCardImage(data);
 
@@ -123,13 +131,21 @@ export default async function CardDetailPage({ params }: Props) {
           </div>
           <h1 style={{
             fontFamily: 'var(--font-playfair), Georgia, serif',
-            fontSize: 64,
+            fontSize: card.role === 'cameo' ? 48 : 64,
             fontWeight: 400,
-            lineHeight: 1,
+            lineHeight: 1.05,
             letterSpacing: -1.5,
           }}>
-            Carapuce
+            {card.role === 'cameo' ? (card.printed_name ?? 'Carte') : 'Carapuce'}
           </h1>
+          {card.role === 'cameo' && (
+            <div style={{
+              marginTop: 12, padding: '8px 14px', display: 'inline-block',
+              border: `1px solid ${p.water}`, color: p.water, fontSize: 12, letterSpacing: 0.3,
+            }}>
+              Carapuce apparaît dans l&apos;illustration — ce n&apos;est pas une carte Carapuce
+            </div>
+          )}
           <div style={{
             fontSize: 22,
             fontStyle: 'italic',
